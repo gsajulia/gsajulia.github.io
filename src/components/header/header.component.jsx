@@ -7,14 +7,19 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from "@material-ui/core/IconButton";
 import Typography from '@material-ui/core/Typography';
+import {Button} from "@material-ui/core";
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
+import withStyles from "@material-ui/core/styles/withStyles";
 
 /* Icons */
 import {ReactComponent as Github} from "./../../assets/github.svg";
 import {ReactComponent as Linkedin} from "./../../assets/linkedin.svg";
 import {ReactComponent as US} from "./../../assets/united-states.svg";
+import {ReactComponent as BR} from "./../../assets/brasil.svg";
 
 /* Translation */
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -86,10 +91,46 @@ const useStyles = makeStyles((theme) => ({
     offset: theme.mixins.toolbar
 }));
 
+const StyledMenu = withStyles({
+    paper: {
+        border: '1px solid #d3d4d5',
+    },
+})((props) => (
+    <Menu
+        elevation={0}
+        getContentAnchorEl={null}
+        anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'center',
+        }}
+        transformOrigin={{
+            vertical: 'top',
+            horizontal: 'center',
+        }}
+        {...props}
+    />
+));
+
 function MyAppBar(props) {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [actualLanguage, setActualLanguage] = React.useState("en");
+
     const {color, ...other} = props;
     const classes = useStyles(props);
-    const { t } = useTranslation();
+    const {t, i18n} = useTranslation();
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const changeLanguage = lng => {
+        setActualLanguage(lng);
+        i18n.changeLanguage(lng).then(r => console.log(r));
+    };
 
     return (
         <AppBar className={classes.appBar} position="fixed" {...other}>
@@ -113,30 +154,25 @@ function MyAppBar(props) {
                     <IconButton aria-label="show 17 new notifications" color="inherit">
                         <Linkedin style={{width: 30, height: 30, fill: "#fff"}}/>
                     </IconButton>
-                    <IconButton aria-label="show 17 new notifications" color="inherit">
-                        <US style={{width: 30, height: 30}}/>
-                    </IconButton>
-                {/*    <IconButton*/}
-                {/*        edge="end"*/}
-                {/*        aria-label="account of current user"*/}
-                {/*        aria-controls={menuId}*/}
-                {/*        aria-haspopup="true"*/}
-                {/*        onClick={handleProfileMenuOpen}*/}
-                {/*        color="inherit"*/}
-                {/*    >*/}
-                {/*        <AccountCircle />*/}
-                {/*    </IconButton>*/}
-                {/*</div>*/}
-                {/*<div className={classes.sectionMobile}>*/}
-                {/*    <IconButton*/}
-                {/*        aria-label="show more"*/}
-                {/*        aria-controls={mobileMenuId}*/}
-                {/*        aria-haspopup="true"*/}
-                {/*        onClick={handleMobileMenuOpen}*/}
-                {/*        color="inherit"*/}
-                {/*    >*/}
-                {/*        <MoreIcon />*/}
-                {/*    </IconButton>*/}
+                    { actualLanguage === "pt" ?
+                        <IconButton aria-label="show 17 new notifications" color="inherit"
+                                    component={Button} onClick={handleClick}>
+                            <BR style={{width: 30, height: 30}}/>
+                        </IconButton> :
+                        <IconButton aria-label="show 17 new notifications" color="inherit"
+                                    component={Button} onClick={handleClick}>
+                            <US style={{width: 30, height: 30}}/>
+                        </IconButton>}
+                    <StyledMenu
+                        id="simple-menu"
+                        anchorEl={anchorEl}
+                        keepMounted
+                        open={Boolean(anchorEl)}
+                        onClose={handleClose}
+                    >
+                        <MenuItem onClick={() => changeLanguage("pt")}>{t('portuguese')}</MenuItem>
+                        <MenuItem onClick={() => changeLanguage("en")}>{t('english')}</MenuItem>
+                    </StyledMenu>
                 </div>
             </Toolbar>
         </AppBar>);
