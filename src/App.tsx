@@ -1,22 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+/* Component */
+import MainPage from "./pages/main-page/main-page.component";
 
 /* Styles */
 import './App.css';
-import {ThemeProvider as MuiThemeProvider} from '@material-ui/core/styles';
-import MyTheme from './MyTheme';
-
-/* Components */
-import Introduction from "./components/introduction/introduction.component";
-import Header from "./components/header/header.component";
 
 import './i18n/config';
 
 const App: React.FC = () => {
     return (
-        <MuiThemeProvider theme={MyTheme}>
-            <Header/>
-            <Introduction/>
-        </MuiThemeProvider>
+        <Router>
+            <Switch>
+                <Route path="/" component={MainPage}/>
+            </Switch>
+        </Router>
     )
 }
 

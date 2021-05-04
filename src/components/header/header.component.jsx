@@ -147,13 +147,14 @@ function MyAppBar(props) {
                 {/*</Typography>*/}
                 <div className={classes.grow}/>
                 <div className={classes.sectionDesktop}>
-                    <IconButton aria-label="show 4 new mails" color="inherit">
+                    <IconButton component={Button} onClick={() => window.open("https://github.com/gsajulia")} aria-label="show 4 new mails"
+                                color="inherit">
                         <Github style={{width: 30, height: 30, fill: "#fff"}}/>
                     </IconButton>
-                    <IconButton aria-label="show 17 new notifications" color="inherit">
+                    <IconButton component={Button} onClick={() => window.open("https://www.linkedin.com/in/j%C3%BAlia-gabriela-santi-acosta-78393ba9/")} aria-label="show 17 new notifications" color="inherit">
                         <Linkedin style={{width: 30, height: 30, fill: "#fff"}}/>
                     </IconButton>
-                    { actualLanguage === "pt" ?
+                    {actualLanguage === "pt" ?
                         <IconButton aria-label="show 17 new notifications" color="inherit"
                                     component={Button} onClick={handleClick}>
                             <BR style={{width: 30, height: 30}}/>
@@ -174,7 +175,8 @@ function MyAppBar(props) {
                     </StyledMenu>
                 </div>
             </Toolbar>
-        </AppBar>);
+        </AppBar>
+    );
 }
 
 MyAppBar.propTypes = {

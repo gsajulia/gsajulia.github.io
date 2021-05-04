@@ -23,8 +23,11 @@ const Introduction: React.FC = () => {
             <Container>
                 <ContainerIntroduction>
                     <TextContainer>
+                        <Typography variant="h4">
+                            {t("greetings1")},
+                        </Typography>
                         <Typography variant="h4" style={{marginBottom: 20}}>
-                            {t("greetings")}
+                            {t("greetings2")} <span style={{color: "#00FF9F"}}>{t("frontend-developer")}</span>!
                         </Typography>
                         <Typography variant="h6">
                             {t("about-me-1")}
