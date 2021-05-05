@@ -13,7 +13,7 @@ import Experience from "../../components/experience/experience.component";
 const MainPage: React.FC = () => {
     return (
     <MuiThemeProvider theme={MyTheme}>
-        {/* <Header/> */}
+        <Header/>
         <a id="introduction">
             <Introduction/>
         </a>
