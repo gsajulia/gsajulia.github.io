@@ -63,14 +63,12 @@ export default makeStyles((theme: Theme) => ({
             display: 'none',
         },
     },
-    // appBar: {
-    //     background: (props: PropsHeader) =>
-    //         props.color === "transparent"
-    //             ? "transparent" : "#000"
-    // },
     tab: {
         color: "#fff",
-        fontWeight: "bold"
+        fontWeight: "bold",
+        '&$selected': {
+            color: "#e82868",
+        }
     },
     offset: theme.mixins.toolbar
 }));
