@@ -4,15 +4,15 @@ export default createMuiTheme({
     palette: {
         primary: {
             light: '#f2f2f2',
-            main: '#f2f2f2',
-            dark: '#000000',
+            main: '#e82868',
+            dark: '#fff',
             contrastText: '#fff',
         },
         secondary: {
             light: '#fff350',
             main: '#ff6922',
             dark: '#ff5722',
-            contrastText: '#212121',
+            contrastText: '#fff',
         },
     },
     typography: {

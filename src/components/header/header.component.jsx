@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import { HashLink as Link } from 'react-router-hash-link';
 
 /* Material UI */
 import {fade, makeStyles} from '@material-ui/core/styles';
@@ -20,6 +21,9 @@ import {ReactComponent as Tech} from "../../assets/tech.svg";
 
 /* Translation */
 import {useTranslation} from 'react-i18next';
+import Paper from "@material-ui/core/Paper";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -88,6 +92,10 @@ const useStyles = makeStyles((theme) => ({
             props.color === "transparent"
                 ? "transparent" : "#000"
     },
+    tab: {
+        color: "#fff",
+        fontWeight: "bold"
+    },
     offset: theme.mixins.toolbar
 }));
 
@@ -114,10 +122,15 @@ const StyledMenu = withStyles({
 function MyAppBar(props) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [actualLanguage, setActualLanguage] = React.useState("en");
+    const [value, setValue] = React.useState(1);
 
     const {color, ...other} = props;
     const classes = useStyles(props);
     const {t, i18n} = useTranslation();
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -143,11 +156,23 @@ function MyAppBar(props) {
                 {/*>*/}
                 {/*    <MenuIcon />*/}
                 {/*</IconButton>*/}
-                <Tech style={{width: 50, height: 50}}/>
+                <Tech style={{width: 50, height: 50, marginRight: 30}}/>
                 {/*<Typography className={classes.title} variant="h6" noWrap>*/}
                 {/*    J*/}
                 {/*</Typography>*/}
-                {/*<a href="#introduction">aa</a>*/}
+                <Paper style={{background: "transparent"}} square>
+                    <Tabs
+                        value={value}
+                        indicatorColor="primary"
+                        textColor="primary"
+                        onChange={handleChange}
+                        aria-label="disabled tabs example"
+                    >
+                        <Tab className={classes.tab} label={t("about")} to="#introduction" component={Link}/>
+                        <Tab className={classes.tab} label={t("experience")} to="#experience" component={Link}/>
+                        <Tab className={classes.tab} label={t("projects")} to="#projects" component={Link}/>
+                    </Tabs>
+                </Paper>
                 <div className={classes.grow}/>
                 <div className={classes.sectionDesktop}>
                     <IconButton component={Button} onClick={() => window.open("https://github.com/gsajulia")} aria-label="show 4 new mails"
