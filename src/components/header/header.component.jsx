@@ -16,6 +16,7 @@ import {ReactComponent as Github} from "./../../assets/github.svg";
 import {ReactComponent as Linkedin} from "./../../assets/linkedin.svg";
 import {ReactComponent as US} from "./../../assets/united-states.svg";
 import {ReactComponent as BR} from "./../../assets/brasil.svg";
+import {ReactComponent as Tech} from "../../assets/tech.svg";
 
 /* Translation */
 import {useTranslation} from 'react-i18next';
@@ -142,9 +143,11 @@ function MyAppBar(props) {
                 {/*>*/}
                 {/*    <MenuIcon />*/}
                 {/*</IconButton>*/}
+                <Tech style={{width: 50, height: 50}}/>
                 {/*<Typography className={classes.title} variant="h6" noWrap>*/}
-                {/*    {t('title')}*/}
+                {/*    J*/}
                 {/*</Typography>*/}
+                {/*<a href="#introduction">aa</a>*/}
                 <div className={classes.grow}/>
                 <div className={classes.sectionDesktop}>
                     <IconButton component={Button} onClick={() => window.open("https://github.com/gsajulia")} aria-label="show 4 new mails"

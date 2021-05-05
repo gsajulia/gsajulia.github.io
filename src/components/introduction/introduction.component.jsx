@@ -18,6 +18,7 @@ import {useTranslation} from "react-i18next";
 
 const Introduction: React.FC = () => {
     const {t} = useTranslation();
+
     return (
         <>
             <Container>

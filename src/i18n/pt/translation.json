@@ -5,5 +5,12 @@
   "about-me-2": "dsadddsadsa",
   "frontend-developer": "Desenvolvedora frontend",
   "portuguese": "Português",
-  "english": "Inglês"
+  "english": "Inglês",
+
+  "experience-skills": "Experiência & Habilidades",
+  "about-drakkar": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+  "about-cowmed": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+  "drakkar-period": "mar. 2020 - abr. 2021",
+  "cowmed-period": "out. 2018 - out. 2019",
+  "internship": "Estágio"
 }
