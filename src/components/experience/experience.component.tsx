@@ -31,7 +31,6 @@ import StyledComponents from "../../assets/styled-components.png";
 import ReactVis from "../../assets/react-vis.png";
 import ReactIcon from "../../assets/react.png";
 
-
 const AboutTypography = withStyles({
     root: {
         color: "#e0e0e0",
