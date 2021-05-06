@@ -8,18 +8,19 @@ import MyTheme from './../../MyTheme';
 import Header from "./../../components/header/header.component";
 import Introduction from "./../../components/introduction/introduction.component";
 import Experience from "../../components/experience/experience.component";
+import Projects from "./../../components/projects/projects.component";
 // import './i18n/config';
 
 const MainPage: React.FC = () => {
     return (
     <MuiThemeProvider theme={MyTheme}>
         <Header/>
-        <a id="introduction">
+        <a id="introduction"/>
             <Introduction/>
-        </a>
-        <a id="experience">
+        <a id="experience"/>
             <Experience/>
-        </a>
+        <a id="projects"/>
+            <Projects/>
     </MuiThemeProvider>
 )
 }
