@@ -23,13 +23,15 @@ import withStyles from "@material-ui/core/styles/withStyles";
 /* Icons */
 import {ReactComponent as Lamp} from "./../../assets/lamp.svg";
 import {ReactComponent as LightLamp} from "./../../assets/light-lamp.svg";
-import HighCharts from "./../../assets/highcharts.png";
-import Sass from "./../../assets/sass.png";
-import Handlebars from "./../../assets/handlebars.png";
-import Javascript from "./../../assets/480px-Unofficial_JavaScript_logo_2.svg.png";
-import StyledComponents from "../../assets/styled-components.png";
-import ReactVis from "../../assets/react-vis.png";
-import ReactIcon from "../../assets/react.png";
+
+/* Icons about project technologies */
+import HighCharts from "./../../assets/technologies/highcharts.png";
+import Sass from "./../../assets/technologies/sass.png";
+import Handlebars from "./../../assets/technologies/handlebars.png";
+import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
+import StyledComponents from "../../assets/technologies/styled-components.png";
+import ReactVis from "../../assets/technologies/react-vis.png";
+import ReactIcon from "../../assets/technologies/react.png";
 
 const AboutTypography = withStyles({
     root: {

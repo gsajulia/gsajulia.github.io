@@ -22,19 +22,19 @@ import {ReactComponent as Lamp} from "./../../assets/lamp.svg";
 import {ReactComponent as LightLamp} from "./../../assets/light-lamp.svg";
 
 /* Icons about project technologies */
-import Javascript from "./../../assets/480px-Unofficial_JavaScript_logo_2.svg.png";
-import StyledComponents from "./../../assets/styled-components.png";
-import ReactIcon from "./../../assets/react.png";
-import Mongo from "./../../assets/mongo.png";
-import Typescript from "./../../assets/ts.png";
-import Heroku from "./../../assets/heroku.png";
-import Node from "./../../assets/node-js.png";
+import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
+import StyledComponents from "./../../assets/technologies/styled-components.png";
+import ReactIcon from "./../../assets/technologies/react.png";
+import Mongo from "./../../assets/technologies/mongo.png";
+import Typescript from "./../../assets/technologies/ts.png";
+import Heroku from "./../../assets/technologies/heroku.png";
+import Node from "./../../assets/technologies/node-js.png";
 
 /* Time Control images */
-import TCLogin from "./../../assets/login.png";
-import TCRegister from "./../../assets/register.png";
-import TCChildScreen from "./../../assets/childs-interface.png";
-import TCConfigurationScreen from "./../../assets/main-interface.png";
+import TCLogin from "./../../assets/time-control/login.png";
+import TCRegister from "./../../assets/time-control/register.png";
+import TCChildScreen from "./../../assets/time-control/childs-interface.png";
+import TCConfigurationScreen from "./../../assets/time-control/main-interface.png";
 
 /* Material UI */
 import {Typography} from "@material-ui/core";
