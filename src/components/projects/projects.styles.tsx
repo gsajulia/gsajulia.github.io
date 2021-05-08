@@ -42,6 +42,9 @@ export const TitleContainer = styled.div`
     justify-content: space-between;
 `;
 
+export const TextContainer = styled.div`
+    margin: 20px 90px 20px 90px;
+`;
 
 export const SiteReference = styled.a` 
     color: #B485FF;

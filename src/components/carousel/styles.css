@@ -23,4 +23,45 @@
     outline: none;
     box-shadow: inset 0 0 1px 0px violet;
   }
+
+  .rec.rec-arrow {
+    background-color: #e0e0e0;
+    color: #424242;
+  }
+
+  .rec.rec-arrow:hover:enabled {
+    background-color: #FB87FD;
+    color: #424242;
+  }
+
+  .rec.rec-arrow:focus:enabled {
+    background-color: #FB87FD;
+    color: #424242;
+  }
+
+  .rec.rec-dot {
+    box-shadow: 0 0 1px 2px #757575;
+  }
+
+  .rec.rec-dot:hover {
+    box-shadow: 0 0 1px 2px #FA5EFD;
+  }
+
+  .rec.rec-dot.rec-dot_active {
+    background-color: rgba(251, 135, 253, 0.5);
+  }
+
+  .rec.rec-dot.rec-dot_active:hover {
+    background-color: rgb(251, 135, 253);
+    box-shadow: 0 0 1px 2px #FA5EFD;
+  }
+
+
+  .image {
+    width: 1050px;
+    height: 750px;
+  }
+
+  
+
   

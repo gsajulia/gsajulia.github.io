@@ -1,6 +1,4 @@
-import React, {useState} from "react";
-import Carousel from "react-elastic-carousel";
-// import Item from "./Item";
+import React, { useState } from "react";
 
 /* Components */
 import CarouselComponent from "../carousel/carousel.component";
@@ -14,12 +12,13 @@ import {
     SmallSpan,
     IdeaContainer,
     TitleContainer,
-    SiteReference
+    SiteReference,
+    TextContainer
 } from "./projects.styles";
 
 /* Icons */
-import {ReactComponent as Lamp} from "./../../assets/lamp.svg";
-import {ReactComponent as LightLamp} from "./../../assets/light-lamp.svg";
+import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
+import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
 
 /* Icons about project technologies */
 import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
@@ -37,19 +36,19 @@ import TCChildScreen from "./../../assets/time-control/childs-interface.png";
 import TCConfigurationScreen from "./../../assets/time-control/main-interface.png";
 
 /* Material UI */
-import {Typography} from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 /* Translation */
-import {useTranslation} from "react-i18next";
-import {Image} from "semantic-ui-react";
+import { useTranslation } from "react-i18next";
+import { Image } from "semantic-ui-react";
 
 const AboutTypography = withStyles({
     root: {
         color: "#e0e0e0",
-        margin: "20px 0 20px 0"
+        margin: "20px 0 40px 0"
     }
 })(Typography);
 
@@ -75,127 +74,129 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Projects: React.FC = () => {
-    const [projectInfo, setProjectInfo] = useState({p1: false});
+    const [projectInfo, setProjectInfo] = useState({ p1: false });
     const path = "./../../assets/";
     //const items = ["login.png", "register.png", "child-interface.png", "main-interface.png"];
     const items = [TCRegister, TCConfigurationScreen, TCChildScreen, TCLogin]
 
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const classes = useStyles();
 
     const handleClickAwayP1 = () => {
-        setProjectInfo({p1: false});
+        setProjectInfo({ p1: false });
     };
 
     return (
 
         <>
             <Container onMouseLeave={() => {
-                setProjectInfo({p1: false});
+                setProjectInfo({ p1: false });
             }}>
 
-                <Typography variant="h4" style={{marginBottom: 20}}>
-                    <span style={{color: "#FB87FD"}}>{t("projects")}</span>
+                <Typography variant="h4" style={{ marginBottom: 20 }}>
+                    <span style={{ color: "#FB87FD" }}>{t("projects")}</span>
                 </Typography>
                 <BoxContainer onMouseLeave={() => {
-                    setProjectInfo({p1: false});
+                    setProjectInfo({ p1: false });
                 }}>
                     <Box onMouseLeave={() => {
-                        setProjectInfo({p1: false});
+                        setProjectInfo({ p1: false });
                     }}>
-                        <TitleContainer>
-                            <Typography variant="h5" style={{marginBottom: 20}}>
-                                Time Control
+                        <TextContainer>
+                            <TitleContainer>
+                                <Typography variant="h5" style={{ marginBottom: 20 }}>
+                                    Time Control
                             </Typography>
-                            {projectInfo.p1 ?
-                                <>
-                                    <ClickAwayListener
-                                        mouseEvent="onMouseDown"
-                                        touchEvent="onTouchStart"
-                                        onClickAway={handleClickAwayP1}
-                                    >
-                                        <div className={classes.root}>
-                                            <LightLamp style={{width: 50, height: 50}}
-                                                       onMouseLeave={() => setProjectInfo({p1: false})}/>
-                                            {projectInfo.p1 ? (
-                                                <div className={classes.dropdown}>
-                                                    <ContainerImage>
-                                                        <img style={{width: 45, height: 35, paddingRight: 2}}
-                                                             src={ReactIcon}/>
-                                                        <div>React</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{
-                                                            width: 30,
-                                                            height: 30,
-                                                            marginRight: 10,
-                                                            marginLeft: 5
-                                                        }} src={Javascript}/>
-                                                        <div>Javascript</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{
-                                                            width: 30,
-                                                            height: 30,
-                                                            marginRight: 10,
-                                                            marginLeft: 5
-                                                        }} src={StyledComponents}/>
-                                                        <div>styled-components</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{
-                                                            width: 30,
-                                                            height: 30,
-                                                            marginRight: 10,
-                                                            marginLeft: 5
-                                                        }} src={Typescript}/>
-                                                        <div>Typescript</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{
-                                                            width: 30,
-                                                            height: 30,
-                                                            marginRight: 10,
-                                                            marginLeft: 5
-                                                        }} src={Node}/>
-                                                        <div>Node.js</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{
-                                                            width: 30,
-                                                            height: 30,
-                                                            marginRight: 10,
-                                                            marginLeft: 5
-                                                        }} src={Mongo}/>
-                                                        <div>Mongo DB</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{
-                                                            width: 30,
-                                                            height: 30,
-                                                            marginRight: 10,
-                                                            marginLeft: 5
-                                                        }} src={Heroku}/>
-                                                        <div>Heroku</div>
-                                                    </ContainerImage>
-                                                </div>
-                                            ) : null}
-                                        </div>
-                                    </ClickAwayListener>
-                                </> :
-                                <IdeaContainer onMouseEnter={() => setProjectInfo({p1: true})}>
-                                    <Lamp style={{width: 40, height: 40, fill: "#e0e0e0", marginBottom: 5}}/>
-                                    <SmallSpan> + info</SmallSpan>
-                                </IdeaContainer>}
-                        </TitleContainer>
-                        <SiteReference
-                            href="https://game-time-control.herokuapp.com/"> game-time-control.herokuapp.com </SiteReference>
-                        <AboutTypography variant="body1">
-                            {t("time-control-description")}
-                        </AboutTypography>
+                                {projectInfo.p1 ?
+                                    <>
+                                        <ClickAwayListener
+                                            mouseEvent="onMouseDown"
+                                            touchEvent="onTouchStart"
+                                            onClickAway={handleClickAwayP1}
+                                        >
+                                            <div className={classes.root}>
+                                                <LightLamp style={{ width: 50, height: 50 }}
+                                                    onMouseLeave={() => setProjectInfo({ p1: false })} />
+                                                {projectInfo.p1 ? (
+                                                    <div className={classes.dropdown}>
+                                                        <ContainerImage>
+                                                            <img style={{ width: 45, height: 35, paddingRight: 2 }}
+                                                                src={ReactIcon} />
+                                                            <div>React</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Javascript} />
+                                                            <div>Javascript</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={StyledComponents} />
+                                                            <div>styled-components</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Typescript} />
+                                                            <div>Typescript</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Node} />
+                                                            <div>Node.js</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Mongo} />
+                                                            <div>Mongo DB</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Heroku} />
+                                                            <div>Heroku</div>
+                                                        </ContainerImage>
+                                                    </div>
+                                                ) : null}
+                                            </div>
+                                        </ClickAwayListener>
+                                    </> :
+                                    <IdeaContainer onMouseEnter={() => setProjectInfo({ p1: true })}>
+                                        <Lamp style={{ width: 40, height: 40, fill: "#e0e0e0", marginBottom: 5 }} />
+                                        <SmallSpan> + info</SmallSpan>
+                                    </IdeaContainer>}
+                            </TitleContainer>
+                            <SiteReference
+                                href="https://game-time-control.herokuapp.com/"> game-time-control.herokuapp.com </SiteReference>
+                            <AboutTypography variant="body1">
+                                {t("time-control-description")}
+                            </AboutTypography>
+                        </TextContainer>
 
-                        <CarouselComponent path={path} items={items}/>
+                        <CarouselComponent path={path} items={items} />
                     </Box>
                 </BoxContainer>
             </Container>
