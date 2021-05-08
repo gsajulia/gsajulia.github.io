@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const Box = styled.div` 
-    border: 1px solid #8f48ff;
+    border: 1px solid #5CE1E6;
     margin: 1vw;
     padding: 40px;
     background-color: #1f1c21;
@@ -44,7 +44,7 @@ export const TitleContainer = styled.div`
 
 
 export const SiteReference = styled.a` 
-    color: #5CE1E6;
+    color: #B485FF;
     text-decoration:none;
 `;
 

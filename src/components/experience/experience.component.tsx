@@ -81,7 +81,7 @@ const Experience: React.FC = () => {
                 setLampStatusCM(false);
             }}>
                 <Typography variant="h4" style={{marginBottom: 20}}>
-                    <span style={{color: "#00FF9F"}}>{t("experience-skills")}</span>
+                    <span style={{color: "#FB87FD"}}>{t("experience-skills")}</span>
                 </Typography>
                 <BoxContainer onMouseLeave={() => {
                     setLampStatusDK(false);

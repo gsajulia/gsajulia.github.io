@@ -96,7 +96,7 @@ const Projects: React.FC = () => {
             }}>
 
                 <Typography variant="h4" style={{marginBottom: 20}}>
-                    <span style={{color: "#00FF9F"}}>{t("projects")}</span>
+                    <span style={{color: "#FB87FD"}}>{t("projects")}</span>
                 </Typography>
                 <BoxContainer onMouseLeave={() => {
                     setProjectInfo({p1: false});
