@@ -5,7 +5,6 @@ import "./styles.css";
 
 interface CarouselProps {
     [breakPoints: number]: { width: number, itemsToShow: number, itemsToScroll: number },
-    path: string,
     items: string[]
 }
 

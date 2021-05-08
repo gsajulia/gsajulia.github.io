@@ -35,6 +35,11 @@ import TCRegister from "./../../assets/time-control/register.png";
 import TCChildScreen from "./../../assets/time-control/childs-interface.png";
 import TCConfigurationScreen from "./../../assets/time-control/main-interface.png";
 
+/* Vacineme images */
+import VMRegister from "./../../assets/vaccine-project/register-user.png";
+import VMAddInfo from "./../../assets/vaccine-project/add-vaccine-info.png";
+import VMChoose from "./../../assets/vaccine-project/choose-cpf.png";
+
 /* Material UI */
 import { Typography } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -74,34 +79,49 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Projects: React.FC = () => {
-    const [projectInfo, setProjectInfo] = useState({ p1: false });
-    const path = "./../../assets/";
-    //const items = ["login.png", "register.png", "child-interface.png", "main-interface.png"];
-    const items = [TCRegister, TCConfigurationScreen, TCChildScreen, TCLogin]
+    const [projectInfo, setProjectInfo] = useState({
+        p1: false,
+        p2: false
+    });
+
+    const items = [TCRegister, TCConfigurationScreen, TCChildScreen, TCLogin];
+    const vacinemeItems = [VMAddInfo, VMChoose, VMRegister];
 
     const { t } = useTranslation();
 
     const classes = useStyles();
 
     const handleClickAwayP1 = () => {
-        setProjectInfo({ p1: false });
+        setProjectInfo({
+            p1: false,
+            p2: false
+        });
     };
 
     return (
 
         <>
             <Container onMouseLeave={() => {
-                setProjectInfo({ p1: false });
+                setProjectInfo({
+                    p1: false,
+                    p2: false
+                });
             }}>
 
                 <Typography variant="h4" style={{ marginBottom: 20 }}>
                     <span style={{ color: "#FB87FD" }}>{t("projects")}</span>
                 </Typography>
                 <BoxContainer onMouseLeave={() => {
-                    setProjectInfo({ p1: false });
+                    setProjectInfo({
+                        p1: false,
+                        p2: false
+                    });
                 }}>
                     <Box onMouseLeave={() => {
-                        setProjectInfo({ p1: false });
+                        setProjectInfo({
+                            p1: false,
+                            p2: false
+                        });
                     }}>
                         <TextContainer>
                             <TitleContainer>
@@ -117,7 +137,10 @@ const Projects: React.FC = () => {
                                         >
                                             <div className={classes.root}>
                                                 <LightLamp style={{ width: 50, height: 50 }}
-                                                    onMouseLeave={() => setProjectInfo({ p1: false })} />
+                                                    onMouseLeave={() => setProjectInfo({
+                                                        p1: false,
+                                                        p2: false
+                                                    })} />
                                                 {projectInfo.p1 ? (
                                                     <div className={classes.dropdown}>
                                                         <ContainerImage>
@@ -184,7 +207,10 @@ const Projects: React.FC = () => {
                                             </div>
                                         </ClickAwayListener>
                                     </> :
-                                    <IdeaContainer onMouseEnter={() => setProjectInfo({ p1: true })}>
+                                    <IdeaContainer onMouseEnter={() => setProjectInfo({
+                                        p1: true,
+                                        p2: false
+                                    })}>
                                         <Lamp style={{ width: 40, height: 40, fill: "#e0e0e0", marginBottom: 5 }} />
                                         <SmallSpan> + info</SmallSpan>
                                     </IdeaContainer>}
@@ -196,7 +222,119 @@ const Projects: React.FC = () => {
                             </AboutTypography>
                         </TextContainer>
 
-                        <CarouselComponent path={path} items={items} />
+                        <CarouselComponent items={items} />
+                    </Box>
+                </BoxContainer>
+                <BoxContainer onMouseLeave={() => {
+                    setProjectInfo({
+                        p1: false,
+                        p2: false
+                    });
+                }}>
+                    <Box onMouseLeave={() => {
+                        setProjectInfo({
+                            p1: false,
+                            p2: false
+                        });
+                    }}>
+                        <TextContainer>
+                            <TitleContainer>
+                                <Typography variant="h5" style={{ marginBottom: 20 }}>
+                                    Vacinemesm
+                            </Typography>
+                                {projectInfo.p2 ?
+                                    <>
+                                        <ClickAwayListener
+                                            mouseEvent="onMouseDown"
+                                            touchEvent="onTouchStart"
+                                            onClickAway={handleClickAwayP1}
+                                        >
+                                            <div className={classes.root}>
+                                                <LightLamp style={{ width: 50, height: 50 }}
+                                                    onMouseLeave={() => setProjectInfo({
+                                                        p1: false,
+                                                        p2: false
+                                                    })} />
+                                                {projectInfo.p2 ? (
+                                                    <div className={classes.dropdown}>
+                                                        <ContainerImage>
+                                                            <img style={{ width: 45, height: 35, paddingRight: 2 }}
+                                                                src={ReactIcon} />
+                                                            <div>React</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Javascript} />
+                                                            <div>Javascript</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={StyledComponents} />
+                                                            <div>styled-components</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Typescript} />
+                                                            <div>Typescript</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Node} />
+                                                            <div>Node.js</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Mongo} />
+                                                            <div>Mongo DB</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
+                                                            }} src={Heroku} />
+                                                            <div>Heroku</div>
+                                                        </ContainerImage>
+                                                    </div>
+                                                ) : null}
+                                            </div>
+                                        </ClickAwayListener>
+                                    </> :
+                                    <IdeaContainer onMouseEnter={() => setProjectInfo({
+                                        p1: false,
+                                        p2: true
+                                    })}>
+                                        <Lamp style={{ width: 40, height: 40, fill: "#e0e0e0", marginBottom: 5 }} />
+                                        <SmallSpan> + info</SmallSpan>
+                                    </IdeaContainer>}
+                            </TitleContainer>
+                            <AboutTypography variant="body1">
+                                {t("vacineme-description")}
+                            </AboutTypography>
+                        </TextContainer>
+
+                        <CarouselComponent items={vacinemeItems} />
                     </Box>
                 </BoxContainer>
             </Container>
