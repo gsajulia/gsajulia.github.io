@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     },
     dropdown: {
         position: 'absolute',
-        bottom: 80,
+        top: 60,
         right: 0,
         left: 0,
         zIndex: 1,

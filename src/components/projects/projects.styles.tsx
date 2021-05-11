@@ -49,5 +49,8 @@ export const TextContainer = styled.div`
 export const SiteReference = styled.a` 
     color: #B485FF;
     text-decoration:none;
+    &:hover {
+        color: #c39dff; 
+    }
 `;
 

@@ -13,8 +13,6 @@ const breakPoints = [
 ];
 
 const CarouselComponent: React.FC<CarouselProps> = (props) => {
-    // const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-
     return (
         <>
             <div className="carousel-wrapper">

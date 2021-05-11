@@ -4,20 +4,26 @@ import React from 'react';
 import {
     ContainerIntroduction,
     TextContainer,
-    Container
+    Container,
+    SiteReference,
+    SmallTextContainer
 } from './introduction.styles';
 
 /* Images */
 import profileImage from "../../assets/profile-image-pink.png";
 
+/* Icons */
+import { ReactComponent as Graduating } from "./../../assets/graduating.svg";
+import { ReactComponent as Stars } from "./../../assets/stars.svg";
+
 /* Material UI */
 import Typography from "@material-ui/core/Typography";
 
 /* Translation */
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 const Introduction: React.FC = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <>
@@ -27,15 +33,26 @@ const Introduction: React.FC = () => {
                         <Typography variant="h4">
                             {t("greetings1")},
                         </Typography>
-                        <Typography variant="h4" style={{marginBottom: 20}}>
-                            {t("greetings2")} <span style={{color: "#FB87FD"}}>{t("frontend-developer")}</span>!
+                        <Typography variant="h4" style={{ marginBottom: 20 }}>
+                            {t("greetings2")} <span style={{ color: "#FB87FD" }}>{t("frontend-developer")}</span>!
                         </Typography>
                         <Typography variant="h6">
                             {t("about-me-1")}
                         </Typography>
                     </TextContainer>
-                    <img alt="profile image" src={profileImage}/>
+                    <img alt="profile image" src={profileImage} />
                 </ContainerIntroduction>
+                <SmallTextContainer>
+                    <Graduating style={{ width: 50, height: 60, margin: "0 10px 10px 0" }} />
+                    {`${t("graduating")} - `}
+                    <SiteReference href="https://www.ufsm.br/">
+                        {t("ufsm")}
+                    </SiteReference>
+                </SmallTextContainer>
+                <SmallTextContainer> 
+                <Stars style={{ width: 45, height: 50, margin: "0 10px 10px 5px" }} />
+                {t("technologies-introduction")} </SmallTextContainer>
+
             </Container>
         </>
     )

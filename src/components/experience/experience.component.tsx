@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     },
     dropdown: {
         position: 'absolute',
-        bottom: 80,
+        top: 60,
         right: 0,
         left: 0,
         zIndex: 1,
@@ -199,6 +199,9 @@ const Experience: React.FC = () => {
                         </AboutTypography>
                     </Box>
                 </BoxContainer>
+                <Typography variant="h5" style={{marginBottom: 20}}>
+                                {t("languages")}
+                </Typography>
             </Container>
         </>
     )
