@@ -1,6 +1,10 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
 
+/*  Material ui */
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
+/* Style */
 import "./styles.css";
 
 interface CarouselProps {
@@ -13,12 +17,14 @@ const breakPoints = [
 ];
 
 const CarouselComponent: React.FC<CarouselProps> = (props) => {
+    const isMobile = useMediaQuery('(max-width: 700px)');
+
     return (
         <>
             <div className="carousel-wrapper">
                 <Carousel initialActiveIndex={4} breakPoints={breakPoints} isRTL>
                     {props.items.map((item: string, index: number) => (
-                        <img className="image" key={index} src={item} />
+                        <img style={{width: isMobile ? 500 : 1050, height: isMobile ? 400 : 750}} className="image" key={index} src={item} />
                     ))}
                 </Carousel>
             </div>

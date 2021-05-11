@@ -119,7 +119,6 @@ const Header: React.FC = () => {
                         </Tabs>
                     </Paper>
                     <div className={classes.grow} />
-                    <div className={classes.sectionDesktop}>
                         <IconButton component={Button} onClick={() => window.open("https://github.com/gsajulia")} aria-label="show 4 new mails"
                             color="inherit">
                             <Github style={{ width: 30, height: 30, fill: "#fff" }} />
@@ -148,7 +147,6 @@ const Header: React.FC = () => {
                             <MenuItem onClick={() => changeLanguage("pt")}>{t('portuguese')}</MenuItem>
                             <MenuItem onClick={() => changeLanguage("en")}>{t('english')}</MenuItem>
                         </StyledMenu>
-                    </div>
                 </Toolbar>
             </AppBar>
             <div className={classes.offset} />

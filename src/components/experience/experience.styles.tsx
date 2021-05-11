@@ -2,6 +2,9 @@ import styled from 'styled-components/macro';
 
 export const Container = styled.div` 
     margin: 6vw 7vw 0 10vw;
+    @media only screen and (max-width: 700px) {
+        margin: 10px;
+    }
 `;
 
 export const BoxBorder = styled.div` 
@@ -9,12 +12,19 @@ export const BoxBorder = styled.div`
     margin: 1vw;
     padding: 40px;
     background-color: #1f1c21;
+    @media only screen and (max-width: 700px) {
+        padding: 30px;
+    }
 `;
 
 export const BoxContainer = styled.div` 
     display: flex;
     flex-direction: row;
     margin: 5vw;
+    @media only screen and (max-width: 700px) {
+        margin: 10px;
+        flex-direction: column;
+    }
 `;
 
 export const SmallSpan = styled.span` 
@@ -57,6 +67,9 @@ export const Languages = styled.div`
 
 export const LanguagesContainer = styled.div` 
     margin: 6vw 7vw 0 7vw;
+    @media only screen and (max-width: 700px) {
+        margin: 40px 10px 40px 10px;
+    }
 `;
 
 export const EachProgress = styled.div` 
