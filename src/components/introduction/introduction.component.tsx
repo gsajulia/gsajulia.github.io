@@ -25,7 +25,7 @@ import { useTranslation } from "react-i18next";
 
 const Introduction: React.FC = () => {
     const { t } = useTranslation();
-    const isMobile = useMediaQuery('(max-width: 700px)');
+    const isMobile = useMediaQuery('(max-width: 1450px)');
 
     return (
         <>

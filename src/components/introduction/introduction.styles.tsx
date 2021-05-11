@@ -6,7 +6,7 @@ export const ContainerIntroduction = styled.div`
     align-items: center;
     flex-direction: row;
     margin-bottom: 20px;
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 1450px) {
         justify-content: center;
         flex-direction: column;
     }
