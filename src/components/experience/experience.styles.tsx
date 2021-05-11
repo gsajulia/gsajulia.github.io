@@ -53,7 +53,10 @@ export const Languages = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    margin: 3vw 7vw 0 10vw;
+`;
+
+export const LanguagesContainer = styled.div` 
+    margin: 6vw 7vw 0 7vw;
 `;
 
 export const EachProgress = styled.div` 

@@ -11,7 +11,8 @@ import {
     ContainerImage,
     LanguageContainer,
     EachProgress,
-    Languages
+    Languages,
+    LanguagesContainer
 } from "./experience.styles";
 
 /* Material UI */
@@ -20,6 +21,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Box from '@material-ui/core/Box';
+import Chip from '@material-ui/core/Chip';
 
 /* Translation */
 import { useTranslation } from "react-i18next";
@@ -43,7 +45,7 @@ import { Theme } from "@material-ui/core";
 
 type Props = {
     value: number;
-  };
+};
 
 const AboutTypography = withStyles({
     root: {
@@ -69,17 +71,25 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(1),
         backgroundColor: theme.palette.background.paper,
         color: "#424242",
-    }
+    },
+    rootChip: {
+        display: 'flex',
+        marginBottom: 20,
+        flexWrap: 'wrap',
+        '& > *': {
+            margin: theme.spacing(0.5),
+        },
+    },
 }));
 
 const useStylesProgress = makeStyles<Theme, Props>((theme) => ({
     root: {
         height: 5,
         borderRadius: 5
-      },
-      bar: ({ value }) => ({
-        background: `linear-gradient(90deg, #6fcbb6 ${100 - value}%, #792df0 100%)`
-      })
+    },
+    bar: ({ value }) => ({
+        background: `linear-gradient(90deg, #6fcbb6 ${100 - value}%, #853ff1 100%)`
+    })
 }));
 
 function LinearProgressWithLabel({ value }: Props) {
@@ -173,6 +183,10 @@ const Experience: React.FC = () => {
                         <Typography variant="body1" style={{ marginBottom: 20 }}>
                             Drakkar <SmallSpan>({t("internship")})</SmallSpan>
                         </Typography>
+                        <div className={classes.rootChip}>
+                                <Chip style={{ backgroundColor: "#FB87FD", fontWeight: "bold" }} size="small" label="Frontend" />
+                                <Chip style={{ backgroundColor: "pink", fontWeight: "bold" }} size="small" label="Design" />
+                        </div>
                         <SmallSpan>
                             {t("drakkar-period")}
                         </SmallSpan>
@@ -231,6 +245,10 @@ const Experience: React.FC = () => {
                         <Typography variant="body1" style={{ marginBottom: 20 }}>
                             COWMED <SmallSpan>({t("internship")})</SmallSpan>
                         </Typography>
+                        <div className={classes.rootChip}>
+                                <Chip style={{ backgroundColor: "#FB87FD", fontWeight: "bold" }} size="small" label="Frontend" />
+                                <Chip style={{ backgroundColor: "pink", fontWeight: "bold" }} size="small" label="Design" />
+                        </div>
                         <SmallSpan>
                             {t("cowmed-period")}
                         </SmallSpan>
@@ -239,65 +257,68 @@ const Experience: React.FC = () => {
                         </AboutTypography>
                     </BoxBorder>
                 </BoxContainer>
-                <Typography variant="h5" style={{ marginBottom: 20 }}>
-                    {t("languages")}
-                </Typography>
-                <Languages>
-                    <LanguageContainer>
-                        <US style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("listening")}
-                            </Typography>
-                            <LinearProgressWithLabel value={90} />
-                        </EachProgress>
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("speaking")}
-                            </Typography>
-                            <LinearProgressWithLabel value={80} />
-                        </EachProgress>
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("reading")}
-                            </Typography>
-                            <LinearProgressWithLabel value={80} />
-                        </EachProgress>
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("writing")}
-                            </Typography>
-                            <LinearProgressWithLabel value={60} />
-                        </EachProgress>
-                    </LanguageContainer>
-                    <LanguageContainer>
-                        <BR style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("listening")}
-                            </Typography>
-                            <LinearProgressWithLabel value={100} />
-                        </EachProgress>
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("speaking")}
-                            </Typography>
-                            <LinearProgressWithLabel value={100} />
-                        </EachProgress>
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("reading")}
-                            </Typography>
-                            <LinearProgressWithLabel value={100} />
-                        </EachProgress>
-                        <EachProgress>
-                            <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                {t("writing")}
-                            </Typography>
-                            <LinearProgressWithLabel value={100} />
-                        </EachProgress>
-                    </LanguageContainer>
-                </Languages>
+                <LanguagesContainer>
+                        <Typography variant="h5" style={{ marginBottom: 40 }}>
+                            {t("languages")}
+                        </Typography>
+                        <Languages>
+                            <LanguageContainer>
+                                <US style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("listening")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={90} />
+                                </EachProgress>
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("speaking")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={80} />
+                                </EachProgress>
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("reading")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={80} />
+                                </EachProgress>
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("writing")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={60} />
+                                </EachProgress>
+                            </LanguageContainer>
+                            <LanguageContainer>
+                                <BR style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("listening")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={100} />
+                                </EachProgress>
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("speaking")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={100} />
+                                </EachProgress>
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("reading")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={100} />
+                                </EachProgress>
+                                <EachProgress>
+                                    <Typography variant="h6" style={{ marginBottom: 30 }}>
+                                        {t("writing")}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={100} />
+                                </EachProgress>
+                            </LanguageContainer>
+                        </Languages>
+
+                </LanguagesContainer>
             </Container>
         </>
     )
