@@ -4,7 +4,7 @@ export const Container = styled.div`
     margin: 6vw 7vw 0 10vw;
 `;
 
-export const Box = styled.div` 
+export const BoxBorder = styled.div` 
     border: 1px solid #5CE1E6;
     margin: 1vw;
     padding: 40px;
@@ -40,3 +40,22 @@ export const ContainerImage = styled.div`
     margin-bottom: 10px;
 `;
 
+export const LanguageContainer = styled.div` 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+`;
+
+export const Languages = styled.div` 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin: 3vw 7vw 0 10vw;
+`;
+
+export const EachProgress = styled.div` 
+    width: 300px;
+`;

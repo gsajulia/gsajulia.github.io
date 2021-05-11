@@ -280,42 +280,6 @@ const Projects: React.FC = () => {
                                                             }} src={StyledComponents} />
                                                             <div>styled-components</div>
                                                         </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Typescript} />
-                                                            <div>Typescript</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Node} />
-                                                            <div>Node.js</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Mongo} />
-                                                            <div>Mongo DB</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Heroku} />
-                                                            <div>Heroku</div>
-                                                        </ContainerImage>
                                                     </div>
                                                 ) : null}
                                             </div>

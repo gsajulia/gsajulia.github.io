@@ -16,7 +16,6 @@ import { ReactComponent as Github } from "./../../assets/github.svg";
 import { ReactComponent as Linkedin } from "./../../assets/linkedin.svg";
 import { ReactComponent as US } from "./../../assets/united-states.svg";
 import { ReactComponent as BR } from "./../../assets/brasil.svg";
-import { ReactComponent as Tech } from "../../assets/tech.svg";
 
 /* Translation */
 import { useTranslation } from 'react-i18next';
