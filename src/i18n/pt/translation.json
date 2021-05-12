@@ -30,5 +30,8 @@
   "time-control-description": "Sistema que permite os pais limitarem o acesso ou tempo jogado e interrompa o jogo, caso passem dos limites, por eles estipulados, para jogos instalados pela Steam no computador de seus filhos, neste projeto atuei em todas as partes do desenvolvimento do sistema web.",
   "vacineme-description": "Esse sistema foi feito com como protótipo para a prefeitura da minha cidade, com o objetivo de ajudar na vacinação local.",
 
-  "developed-by": "Desenvolvido por"
+  "developed-by": "Desenvolvido por",
+  "icons-made-by": "Ícones feitos por",
+  "and": "e",
+  "from": "de"
 }

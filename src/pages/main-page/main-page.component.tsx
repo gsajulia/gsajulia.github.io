@@ -37,9 +37,9 @@ const MainPage: React.FC = () => {
                 </SmallTextContainer>
                 <SiteReferenceContainer>
                     <div>
-                        {`Icons made by `}
-                        <SiteReference href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</SiteReference>{` and `}
-                        <SiteReference href="https://www.freepik.com" title="Freepik">Freepik</SiteReference>{` from `}
+                        {`${t("icons-made-by")} `}
+                        <SiteReference href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</SiteReference>{` ${t("and")} `}
+                        <SiteReference href="https://www.freepik.com" title="Freepik">Freepik</SiteReference>{` ${t("from")} `}
                         <SiteReference href="https://www.flaticon.com/" title="Flaticon">Flaticon</SiteReference>
                     </div>
                 </SiteReferenceContainer>
