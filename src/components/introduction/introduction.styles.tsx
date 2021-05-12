@@ -31,6 +31,7 @@ export const Container = styled.div`
 export const SiteReference = styled.a` 
     color: #B485FF;
     text-decoration:none;
+    margin-left: 10px;
     &:hover {
         color: #c39dff; 
     }
@@ -44,4 +45,10 @@ export const SmallTextContainer = styled.div`
     @media only screen and (max-width: 700px) {
         margin: 10px;
     }
+`;
+
+export const SmallSpan = styled.span` 
+    font-size: 12px;
+    margin: 0 10px 0 10px;
+    color: #e0e0e0;
 `;

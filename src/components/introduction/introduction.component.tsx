@@ -6,7 +6,8 @@ import {
     TextContainer,
     Container,
     SiteReference,
-    SmallTextContainer
+    SmallTextContainer,
+    SmallSpan
 } from './introduction.styles';
 
 /* Images */
@@ -27,6 +28,14 @@ const Introduction: React.FC = () => {
     const { t } = useTranslation();
     const isMobile = useMediaQuery('(max-width: 1450px)');
 
+    const yearsOfExperience = (): number => {
+        const date:string[] = new Date().toISOString().split("-");
+        const actualYear: number = +date[0];
+        let year = +2018;
+
+        return (actualYear - year) - 1;
+    };
+
     return (
         <>
             <Container>
@@ -41,7 +50,7 @@ const Introduction: React.FC = () => {
                                 {t("greetings2")} <span style={{ color: "#FB87FD" }}>{t("frontend-developer")}</span>!
                         </Typography>
                             <Typography variant="h6">
-                                {t("about-me-1")}
+                                {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
                             </Typography>
                         </TextContainer>
 
@@ -50,12 +59,12 @@ const Introduction: React.FC = () => {
                         <TextContainer>
                             <Typography variant="h4">
                                 {t("greetings1")},
-                                </Typography>
+                        </Typography>
                             <Typography variant="h4" style={{ marginBottom: 20 }}>
                                 {t("greetings2")} <span style={{ color: "#FB87FD" }}>{t("frontend-developer")}</span>!
-                                </Typography>
+                        </Typography>
                             <Typography variant="h6">
-                                {t("about-me-1")}
+                                {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
                             </Typography>
                         </TextContainer>
 
@@ -63,11 +72,13 @@ const Introduction: React.FC = () => {
                     </ContainerIntroduction>}
                 <SmallTextContainer>
                     <Graduating style={{ width: 50, height: 60, margin: "0 10px 10px 0" }} />
-                    {`${t("graduating")} - `}
+                    {`${t("graduating")} `} <SmallSpan>{" (2017-2022) "}</SmallSpan>
+                    -
                     <SiteReference href="https://www.ufsm.br/">
                         {t("ufsm")}
                     </SiteReference>
                 </SmallTextContainer>
+                
                 <SmallTextContainer>
                     <Stars style={{ width: 45, height: 50, margin: "0 10px 10px 5px" }} />
                     {t("technologies-introduction")} </SmallTextContainer>

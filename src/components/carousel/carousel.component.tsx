@@ -17,7 +17,7 @@ const breakPoints = [
 ];
 
 const CarouselComponent: React.FC<CarouselProps> = (props) => {
-    const isMobile = useMediaQuery('(max-width: 700px)');
+    const isMobile = useMediaQuery('(max-width: 1500px)');
 
     return (
         <>

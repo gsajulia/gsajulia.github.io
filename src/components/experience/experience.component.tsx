@@ -253,7 +253,7 @@ const Experience: React.FC = () => {
                             {t("cowmed-period")}
                         </SmallSpan>
                         <AboutTypography variant="body1">
-                            {t("about-drakkar")}
+                            {t("about-cowmed")}
                         </AboutTypography>
                     </BoxBorder>
                 </BoxContainer>

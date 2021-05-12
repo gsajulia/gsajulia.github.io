@@ -8,17 +8,17 @@
 
   "greetings1": "Oi, me chamo Júlia",
   "greetings2": "e sou",
-  "about-me-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "about-me-2": "dsadddsadsa",
+  "about-me-1": "Trabalho com desenvolvimento de software a mais de ",
+  "about-me-2": "anos, adoro front end e busco me desenvolver cada vez mais nesta área. Gosto também de design, me comunicar com o time e novos desafios!",
   "frontend-developer": "Desenvolvedora frontend",
   "graduating": "Graduando",
-  "technologies-introduction": "Veja as tecnologias que utilizo no \"+ info\" dos cards",
+  "technologies-introduction": "Veja as tecnologias que utilizo no + info dos cards",
   "ufsm": "Universidade Federal de Santa Maria",
   "languages": "Idiomas",
 
   "experience-skills": "Experiência & Habilidades",
-  "about-drakkar": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  "about-cowmed": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+  "about-drakkar": "Empresa especialista em agricultura e precisão, nela liderei e participei na construção do front end de um sistema web com PWA na área de gestão de pessoas que auxilia gerentes na tomada de decisões de forma estratégica.",
+  "about-cowmed": "Empresa que atua no monitoramento de animais, nela fiz parte da equipe de front end, dando manutenção ao sistema que permite o acompanhamento dos ruminantes remotamente.",
   "drakkar-period": "mar. 2020 - abr. 2021",
   "cowmed-period": "out. 2018 - out. 2019",
   "internship": "Estágio",
@@ -27,8 +27,8 @@
   "reading": "Leitura",
   "listening": "Escuta",
   
-  "time-control-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-  "vacineme-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+  "time-control-description": "Sistema que permite os pais limitarem o acesso ou tempo jogado e interrompa o jogo, caso passem dos limites, por eles estipulados, para jogos instalados pela Steam no computador de seus filhos, neste projeto atuei em todas as partes do desenvolvimento do sistema web.",
+  "vacineme-description": "Esse sistema foi feito com como protótipo para a prefeitura da minha cidade, com o objetivo de ajudar na vacinação local.",
 
   "developed-by": "Desenvolvido por"
 }
