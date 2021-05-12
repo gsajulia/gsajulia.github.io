@@ -3,7 +3,7 @@ import React from 'react';
 /* Styles */
 import { ThemeProvider as MuiThemeProvider } from '@material-ui/core/styles';
 import MyTheme from './../../MyTheme';
-import { Footer, SmallTextContainer, SiteReference, SiteReferenceContainer } from "./main-page.styles";
+import { Footer, SmallTextContainer, SiteReference, SiteReferenceContainer, EmailContainer } from "./main-page.styles";
 
 /* Icons */
 import { ReactComponent as Stars } from "./../../assets/stars.svg";
@@ -31,10 +31,13 @@ const MainPage: React.FC = () => {
             <a id="projects" />
             <Projects />
             <Footer>
-                <SmallTextContainer>
-                    <Stars style={{ width: 45, height: 50, margin: "0 10px 10px 5px" }} />
-                    {`${t("developed-by")} Júlia Gabriela Santi Acosta`}
-                </SmallTextContainer>
+                <EmailContainer>
+                    <SmallTextContainer>
+                        <Stars style={{ width: 45, height: 50, margin: "0 10px 10px 5px" }} />
+                        {`${t("developed-by")} Júlia Gabriela Santi Acosta`}
+                    </SmallTextContainer>
+                    juliagabriela98@gmail.com
+                </EmailContainer>
                 <SiteReferenceContainer>
                     <div>
                         {`${t("icons-made-by")} `}

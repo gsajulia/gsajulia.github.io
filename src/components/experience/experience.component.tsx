@@ -12,7 +12,9 @@ import {
     LanguageContainer,
     EachProgress,
     Languages,
-    LanguagesContainer
+    LanguagesContainer,
+    TechnologiesContainer,
+    ContainerTechImage
 } from "./experience.styles";
 
 /* Material UI */
@@ -22,6 +24,8 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Box from '@material-ui/core/Box';
 import Chip from '@material-ui/core/Chip';
+import { Theme } from "@material-ui/core";
+import Button from '@material-ui/core/Button';
 
 /* Translation */
 import { useTranslation } from "react-i18next";
@@ -41,7 +45,10 @@ import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_
 import StyledComponents from "../../assets/technologies/styled-components.png";
 import ReactVis from "../../assets/technologies/react-vis.png";
 import ReactIcon from "../../assets/technologies/react.png";
-import { Theme } from "@material-ui/core";
+import Mongo from "./../../assets/technologies/mongo.png";
+import Typescript from "./../../assets/technologies/ts.png";
+import Heroku from "./../../assets/technologies/heroku.png";
+import Node from "./../../assets/technologies/node-js.png";
 
 type Props = {
     value: number;
@@ -114,6 +121,8 @@ const Experience: React.FC = () => {
     const { t } = useTranslation();
     const [lampStatusDK, setLampStatusDK] = useState(false);
     const [lampStatusCM, setLampStatusCM] = useState(false);
+
+    const [showTechnologies, setShowTechnologies] = useState(false);
     const classes = useStyles();
 
     const handleClickAwayDK = () => {
@@ -258,7 +267,7 @@ const Experience: React.FC = () => {
                     </BoxBorder>
                 </BoxContainer>
                 <LanguagesContainer>
-                    <Typography variant="h5" style={{ marginBottom: 40 }}>
+                    <Typography variant="h5" style={{ marginBottom: 30 }}>
                         {t("languages")}
                     </Typography>
                     <Languages>
@@ -318,6 +327,113 @@ const Experience: React.FC = () => {
                         </LanguageContainer>
                     </Languages>
 
+                </LanguagesContainer>
+                <LanguagesContainer>
+                    <Typography variant="h5" style={{ marginBottom: 30 }}>
+                        {t("all-technologies")}
+                    </Typography>
+                    <Button variant="contained" style={{ backgroundColor: "#1f1c21", border: "1px solid #B485FF"}} onClick={() => { setShowTechnologies(!showTechnologies) }} color="secondary">
+                        <LightLamp style={{ width: 40, height: 40, marginRight: 20 }}
+                            onMouseLeave={() => setLampStatusCM(false)} /> {showTechnologies ? t("hide") : t("show")}
+                    </Button>
+                    {showTechnologies ?
+                        <BoxBorder style={{maxWidth: 500}}>
+                            <Typography variant="h5" style={{ marginBottom: 20 }}>
+                                Frontend
+                            </Typography>
+                            <TechnologiesContainer>
+                                <ContainerTechImage>
+                                    <img style={{ width: 45, height: 35, paddingRight: 2 }}
+                                        src={ReactIcon} />
+                                    <div>React</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginRight: 10,
+                                        marginLeft: 5
+                                    }} src={Javascript} />
+                                    <div>Javascript</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginRight: 10,
+                                        marginLeft: 5
+                                    }} src={StyledComponents} />
+                                    <div>styled-components</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginRight: 10,
+                                        marginLeft: 5
+                                    }} src={Typescript} />
+                                    <div>Typescript</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{ width: 30, height: 30, marginRight: 10, marginLeft: 5 }} src={ReactVis} />
+                                    <div>react-vis</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={HighCharts} />
+                                    <div>Highcharts</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={Sass} />
+                                    <div>Sass</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={Handlebars} />
+                                    <div>Handlebars</div>
+                                </ContainerTechImage>
+                            </TechnologiesContainer>
+                            <Typography variant="h5" style={{ marginBottom: 20 }}>
+                                Backend
+                            </Typography>
+                            <TechnologiesContainer>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginRight: 10,
+                                        marginLeft: 5
+                                    }} src={Typescript} />
+                                    <div>Typescript</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginRight: 10,
+                                        marginLeft: 5
+                                    }} src={Node} />
+                                    <div>Node.js</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginRight: 10,
+                                        marginLeft: 5
+                                    }} src={Mongo} />
+                                    <div>Mongo DB</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 30,
+                                        height: 30,
+                                        marginRight: 10,
+                                        marginLeft: 5
+                                    }} src={Heroku} />
+                                    <div>Heroku</div>
+                                </ContainerTechImage>
+                            </TechnologiesContainer>
+                        </BoxBorder>
+                        : null}
                 </LanguagesContainer>
             </Container>
         </>

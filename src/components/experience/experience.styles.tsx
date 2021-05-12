@@ -50,6 +50,14 @@ export const ContainerImage = styled.div`
     margin-bottom: 10px;
 `;
 
+export const ContainerTechImage = styled.div` 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px 10px 30px 10px;
+`;
+
+
 export const LanguageContainer = styled.div` 
     display: flex;
     justify-content: center;
@@ -75,3 +83,13 @@ export const LanguagesContainer = styled.div`
 export const EachProgress = styled.div` 
     width: 300px;
 `;
+
+export const TechnologiesContainer = styled.div` 
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    @media only screen and (max-width: 700px) {
+        margin: 10px;
+    }
+`;
+

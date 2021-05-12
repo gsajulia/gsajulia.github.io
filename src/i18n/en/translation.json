@@ -15,6 +15,8 @@
   "technologies-introduction": "See the technologies I use hovering + info in the cards",
   "ufsm": "Federal University of Santa Maria",
   "languages": "Languages",
+  "show": "Show",
+  "hide": "Hide",
 
 
   "experience-skills": "Experience & Skills",
@@ -27,7 +29,8 @@
   "speaking": "Speaking",
   "reading": "Reading",
   "listening": "Listening",
-  
+  "all-technologies": "All technologies",
+
   "time-control-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
   "vacineme-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
 
@@ -35,4 +38,5 @@
   "icons-made-by": "Icons made by",
   "and": "and",
   "from": "from"
+
 }
