@@ -6,6 +6,9 @@ export const Footer = styled.div`
     height: 130px;
     display: flex;
     flex-direction: column;
+    @media only screen and (max-width: 700px) {
+        height: 170px;
+    }
 `;
 
 export const SmallTextContainer = styled.div` 
@@ -27,8 +30,12 @@ export const SiteReference = styled.a`
 export const SiteReferenceContainer = styled.div` 
     display: flex;
     justify-content: flex-end;
-    margin-right: 10px;
+    margin-right: 20px;
     color: #e0e0e0;
+    @media only screen and (max-width: 700px) {
+        margin-top: 30px;
+        justify-content: center;
+    }
 `;
 
 export const EmailContainer = styled.div` 

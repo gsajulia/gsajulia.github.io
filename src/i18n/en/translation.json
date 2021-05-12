@@ -8,8 +8,8 @@
 
   "greetings1": "Hi, I'm Júlia",
   "greetings2": "a",
-  "about-me-1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  "about-me-2": "dsadddsadsa",
+  "about-me-1": "I have been working with software development for over ",
+  "about-me-2": " years. I work with Javascript, and the most diverse frontend technologies, such as React, Styled-components, always seeking to improve myself, whether in new technologies or those I already know. I love frontend, design, communicating with the team and I am always waiting for new challenges!",
   "frontend-developer": "Frontend developer",
   "graduating": "Graduating",
   "technologies-introduction": "See the technologies I use hovering + info in the cards",
@@ -20,8 +20,8 @@
 
 
   "experience-skills": "Experience & Skills",
-  "about-drakkar": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-  "about-cowmed": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
+  "about-drakkar": "A company specialized in agriculture and precision, in which I led the group and participated in the construction of the frontend of a web system with PWA in the area of ​​people management that assists managers in making strategic decisions.",
+  "about-cowmed": "A company that operates in animal monitoring, I was part of the frontend team, maintaining the system that allows the monitoring of ruminants remotely.",
   "drakkar-period": "mar. 2020 - apr. 2021",
   "cowmed-period": "oct. 2018 - oct. 2019",
   "internship": "Internship",
@@ -31,8 +31,8 @@
   "listening": "Listening",
   "all-technologies": "All technologies",
 
-  "time-control-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
-  "vacineme-description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et",
+  "time-control-description": "System that allows parents to limit access or time played and interrupt the game, if they exceed the limits, stipulated by them, for games installed by Steam on their children's computer, in this project I worked in all parts of the web system development.",
+  "vacineme-description": "This system was made as a prototype for the town hall of my city, with the aim of helping with local vaccination.",
 
   "developed-by": "Developed by",
   "icons-made-by": "Icons made by",
