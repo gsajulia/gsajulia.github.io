@@ -49,6 +49,9 @@ import Mongo from "./../../assets/technologies/mongo.png";
 import Typescript from "./../../assets/technologies/ts.png";
 import Heroku from "./../../assets/technologies/heroku.png";
 import Node from "./../../assets/technologies/node-js.png";
+import Mongoose from "./../../assets/technologies/mongoose.png";
+import Express from "./../../assets/technologies/express.png";
+import { ReactComponent as MySQL } from "./../../assets/technologies/MySQL-Logo.svg";
 
 type Props = {
     value: number;
@@ -332,12 +335,12 @@ const Experience: React.FC = () => {
                     <Typography variant="h5" style={{ marginBottom: 30 }}>
                         {t("all-technologies")}
                     </Typography>
-                    <Button variant="contained" style={{ backgroundColor: "#1f1c21", border: "1px solid #B485FF"}} onClick={() => { setShowTechnologies(!showTechnologies) }} color="secondary">
+                    <Button variant="contained" style={{ backgroundColor: "#1f1c21", border: "1px solid #B485FF" }} onClick={() => { setShowTechnologies(!showTechnologies) }} color="secondary">
                         <LightLamp style={{ width: 40, height: 40, marginRight: 20 }}
                             onMouseLeave={() => setLampStatusCM(false)} /> {showTechnologies ? t("hide") : t("show")}
                     </Button>
                     {showTechnologies ?
-                        <BoxBorder style={{maxWidth: 500}}>
+                        <BoxBorder style={{ maxWidth: 500 }}>
                             <Typography variant="h5" style={{ marginBottom: 20 }}>
                                 Frontend
                             </Typography>
@@ -406,12 +409,23 @@ const Experience: React.FC = () => {
                                 </ContainerTechImage>
                                 <ContainerTechImage>
                                     <img style={{
-                                        width: 30,
-                                        height: 30,
+                                        width: 40,
+                                        height: 40,
+                                        padding: "0 5px 0 5px",
                                         marginRight: 10,
-                                        marginLeft: 5
+                                        backgroundColor: "#e0e0e0"
                                     }} src={Node} />
                                     <div>Node.js</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 60,
+                                        height: 40,
+                                        marginRight: 10,
+                                        marginLeft: 5,
+                                        backgroundColor: "#e0e0e0"
+                                    }} src={Express} />
+                                    <div>Express</div>
                                 </ContainerTechImage>
                                 <ContainerTechImage>
                                     <img style={{
@@ -421,6 +435,22 @@ const Experience: React.FC = () => {
                                         marginLeft: 5
                                     }} src={Mongo} />
                                     <div>Mongo DB</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <img style={{
+                                        width: 42,
+                                        height: 20,
+                                        marginRight: 5,
+                                    }} src={Mongoose} />
+                                    <div>Mongoose</div>
+                                </ContainerTechImage>
+                                <ContainerTechImage>
+                                    <MySQL style={{
+                                        width: 52,
+                                        height: 50,
+                                        marginRight: 5,
+                                    }} />
+                                    <div>MySQL</div>
                                 </ContainerTechImage>
                                 <ContainerTechImage>
                                     <img style={{

@@ -28,6 +28,9 @@ import Mongo from "./../../assets/technologies/mongo.png";
 import Typescript from "./../../assets/technologies/ts.png";
 import Heroku from "./../../assets/technologies/heroku.png";
 import Node from "./../../assets/technologies/node-js.png";
+import Mongoose from "./../../assets/technologies/mongoose.png";
+import Express from "./../../assets/technologies/express.png";
+
 
 /* Time Control images */
 import TCLogin from "./../../assets/time-control/login.png";
@@ -198,8 +201,25 @@ const Projects: React.FC = () => {
                                                                 height: 30,
                                                                 marginRight: 10,
                                                                 marginLeft: 5
+                                                            }} src={Express} />
+                                                            <div>Express</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 30,
+                                                                height: 30,
+                                                                marginRight: 10,
+                                                                marginLeft: 5
                                                             }} src={Mongo} />
                                                             <div>Mongo DB</div>
+                                                        </ContainerImage>
+                                                        <ContainerImage>
+                                                            <img style={{
+                                                                width: 42,
+                                                                height: 20,
+                                                                marginRight: 5,
+                                                            }} src={Mongoose} />
+                                                            <div>Mongoose</div>
                                                         </ContainerImage>
                                                         <ContainerImage>
                                                             <img style={{
