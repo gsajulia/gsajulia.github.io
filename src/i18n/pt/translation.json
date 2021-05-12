@@ -9,7 +9,7 @@
   "greetings1": "Oi, me chamo Júlia",
   "greetings2": "e sou",
   "about-me-1": "Trabalho com desenvolvimento de software a mais de ",
-  "about-me-2": "anos. Atuo com Javascript, e as mais diversas tecnologias de frontend, como React, Styled-components, sempre buscando me aperfeiçoar, seja em novas tecnologias ou nas que já conheço. Adoro frontend, design, me comunicar com a equipe e sempre estou a espera de novos desafios!",
+  "about-me-2": "anos. Atuo com Javascript, e as mais diversas tecnologias de frontend, como React e Styled-components, sempre buscando me aperfeiçoar, seja em novas tecnologias ou nas que já conheço. Adoro frontend, design, me comunicar com a equipe e sempre estou a espera de novos desafios!",
   "frontend-developer": "Desenvolvedora Frontend",
   "graduating": "Graduando",
   "technologies-introduction": "Veja as tecnologias que utilizo no + info dos cards",
@@ -20,7 +20,7 @@
 
   "experience-skills": "Experiência & Habilidades",
   "about-drakkar": "Empresa especialista em agricultura e precisão, nela liderei o grupo e participei na construção do frontend de um sistema web com PWA na área de gestão de pessoas que auxilia gerentes na tomada de decisões de forma estratégica.",
-  "about-cowmed": "Empresa que atua no monitoramento de animais, nela fiz parte da equipe de frontend, dando manutenção ao sistema que permite o acompanhamento dos ruminantes remotamente.",
+  "about-cowmed": "Empresa que atua no monitoramento de animais, nela fiz parte da equipe de frontend, dando manutenção e fazendo a migração de jQuery para React ao sistema que permite o acompanhamento dos ruminantes remotamente.",
   "drakkar-period": "mar. 2020 - abr. 2021",
   "cowmed-period": "out. 2018 - out. 2019",
   "internship": "Estágio",
@@ -30,7 +30,7 @@
   "listening": "Escuta",
   "all-technologies": "Todas tecnologias",
   
-  "time-control-description": "Sistema que permite os pais limitarem o acesso ou tempo jogado e interrompa o jogo, caso passem dos limites, por eles estipulados, para jogos instalados pela Steam no computador de seus filhos, neste projeto atuei em todas as partes do desenvolvimento do sistema web.",
+  "time-control-description": "Sistema que permite os pais limitarem o acesso e tempo jogado de seus filhos em jogos da Steam. Neste projeto atuei em todas as partesd do desenvolvimento do sistema web.",
   "vacineme-description": "Esse sistema foi feito com como protótipo para a prefeitura da minha cidade, com o objetivo de ajudar na vacinação local.",
 
   "developed-by": "Desenvolvido por",
