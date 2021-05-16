@@ -13,6 +13,8 @@ import Heroku from "./../../assets/technologies/heroku.png";
 import Node from "./../../assets/technologies/node-js.png";
 import Mongoose from "./../../assets/technologies/mongoose.png";
 import Express from "./../../assets/technologies/express.png";
+import css from "./../../assets/technologies/css.png";
+import html from "./../../assets/technologies/html5.png";
 
 export const dkItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
@@ -41,7 +43,9 @@ export const frontendItems = [
     { image: HighCharts, label: "Highcharts", width: 30, height: 30, left: 5, right: 10 },
     { image: Sass, label: "Sass", width: 30, height: 30, left: 5, right: 10 },
     { image: ReactVis, label: "react-vis", width: 30, height: 30, left: 5, right: 10 },
-    { image: Handlebars, label: "Handlebars", width: 30, height: 30, left: 5, right: 10 }];
+    { image: Handlebars, label: "Handlebars", width: 30, height: 30, left: 5, right: 10 },
+    { image: css, label: "CSS", width: 30, height: 30, left: 5, right: 10 },
+    { image: html, label: "HTML", width: 30, height: 30, left: 5, right: 10 }];
 
 export const backendItems = [
     { image: Typescript, label: "Typescript", width: 30, height: 30, left: 5, right: 10 },
