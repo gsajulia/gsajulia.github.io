@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.919c3758.chunk.css",
-    "main.js": "/static/js/main.dbb83a36.chunk.js",
-    "main.js.map": "/static/js/main.dbb83a36.chunk.js.map",
+    "main.js": "/static/js/main.1dd3523e.chunk.js",
+    "main.js.map": "/static/js/main.1dd3523e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e0fab3b6.js",
     "runtime-main.js.map": "/static/js/runtime-main.e0fab3b6.js.map",
     "static/js/2.88e51317.chunk.js": "/static/js/2.88e51317.chunk.js",
@@ -17,10 +17,12 @@
     "static/media/brasil.8effcae7.svg": "/static/media/brasil.8effcae7.svg",
     "static/media/childs-interface.52c76954.png": "/static/media/childs-interface.52c76954.png",
     "static/media/choose-cpf.aa874488.png": "/static/media/choose-cpf.aa874488.png",
+    "static/media/css.286a9900.png": "/static/media/css.286a9900.png",
     "static/media/express.915b8962.png": "/static/media/express.915b8962.png",
     "static/media/github.1be3365d.svg": "/static/media/github.1be3365d.svg",
     "static/media/graduating.42463af7.svg": "/static/media/graduating.42463af7.svg",
     "static/media/highcharts.26edf589.png": "/static/media/highcharts.26edf589.png",
+    "static/media/html5.dce04abb.png": "/static/media/html5.dce04abb.png",
     "static/media/lamp.5172c91d.svg": "/static/media/lamp.5172c91d.svg",
     "static/media/light-lamp.1d88a24d.svg": "/static/media/light-lamp.1d88a24d.svg",
     "static/media/linkedin.89004aa0.svg": "/static/media/linkedin.89004aa0.svg",
@@ -42,6 +44,6 @@
     "static/js/runtime-main.e0fab3b6.js",
     "static/js/2.88e51317.chunk.js",
     "static/css/main.919c3758.chunk.css",
-    "static/js/main.dbb83a36.chunk.js"
+    "static/js/main.1dd3523e.chunk.js"
   ]
 }
