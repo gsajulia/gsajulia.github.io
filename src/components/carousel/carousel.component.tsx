@@ -24,7 +24,7 @@ const CarouselComponent: React.FC<CarouselProps> = (props) => {
             <div className="carousel-wrapper">
                 <Carousel initialActiveIndex={4} breakPoints={breakPoints} isRTL>
                     {props.items.map((item: string, index: number) => (
-                        <img style={{width: isMobile ? 500 : 1050, height: isMobile ? 400 : 750}} className="image" key={index} src={item} />
+                        <img alt="" style={{width: isMobile ? 500 : 1050, height: isMobile ? 400 : 750}} className="image" key={index} src={item} />
                     ))}
                 </Carousel>
             </div>

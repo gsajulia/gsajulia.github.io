@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { HashLink as Link } from 'react-router-hash-link';
 
 /* Material UI */

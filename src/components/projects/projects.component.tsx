@@ -20,18 +20,6 @@ import {
 import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
 import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
 
-/* Icons about project technologies */
-import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
-import StyledComponents from "./../../assets/technologies/styled-components.png";
-import ReactIcon from "./../../assets/technologies/react.png";
-import Mongo from "./../../assets/technologies/mongo.png";
-import Typescript from "./../../assets/technologies/ts.png";
-import Heroku from "./../../assets/technologies/heroku.png";
-import Node from "./../../assets/technologies/node-js.png";
-import Mongoose from "./../../assets/technologies/mongoose.png";
-import Express from "./../../assets/technologies/express.png";
-
-
 /* Time Control images */
 import TCLogin from "./../../assets/time-control/login.png";
 import TCRegister from "./../../assets/time-control/register.png";
@@ -52,7 +40,8 @@ import Chip from '@material-ui/core/Chip';
 
 /* Translation */
 import { useTranslation } from "react-i18next";
-import { Image } from "semantic-ui-react";
+
+import { tcItems, vmItems } from "./constants";
 
 const AboutTypography = withStyles({
     root: {
@@ -154,82 +143,19 @@ const Projects: React.FC = () => {
                                                     })} />
                                                 {projectInfo.p1 ? (
                                                     <div className={classes.dropdown}>
-                                                        <ContainerImage>
-                                                            <img style={{ width: 45, height: 35, paddingRight: 2 }}
-                                                                src={ReactIcon} />
-                                                            <div>React</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Javascript} />
-                                                            <div>Javascript</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={StyledComponents} />
-                                                            <div>styled-components</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Typescript} />
-                                                            <div>Typescript</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Node} />
-                                                            <div>Node.js</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Express} />
-                                                            <div>Express</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Mongo} />
-                                                            <div>Mongo DB</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 42,
-                                                                height: 20,
-                                                                marginRight: 5,
-                                                            }} src={Mongoose} />
-                                                            <div>Mongoose</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Heroku} />
-                                                            <div>Heroku</div>
-                                                        </ContainerImage>
+                                                        {tcItems.map((element, index) => {
+                                                            return (
+                                                                <ContainerImage key={index}>
+                                                                    <img alt={element.label} style={{
+                                                                        width: element.width,
+                                                                        height: element.height,
+                                                                        marginRight: element.right,
+                                                                        marginLeft: element.left
+                                                                    }} src={element.image} />
+                                                                    <div>{element.label}</div>
+                                                                </ContainerImage>
+                                                            )
+                                                        })}
                                                     </div>
                                                 ) : null}
                                             </div>
@@ -290,29 +216,19 @@ const Projects: React.FC = () => {
                                                     })} />
                                                 {projectInfo.p2 ? (
                                                     <div className={classes.dropdown}>
-                                                        <ContainerImage>
-                                                            <img style={{ width: 45, height: 35, paddingRight: 2 }}
-                                                                src={ReactIcon} />
-                                                            <div>React</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={Javascript} />
-                                                            <div>Javascript</div>
-                                                        </ContainerImage>
-                                                        <ContainerImage>
-                                                            <img style={{
-                                                                width: 30,
-                                                                height: 30,
-                                                                marginRight: 10,
-                                                                marginLeft: 5
-                                                            }} src={StyledComponents} />
-                                                            <div>styled-components</div>
-                                                        </ContainerImage>
+                                                        {vmItems.map((element, index) => {
+                                                            return (
+                                                                <ContainerImage key={index}>
+                                                                    <img alt={element.label} style={{
+                                                                        width: element.width,
+                                                                        height: element.height,
+                                                                        marginRight: element.right,
+                                                                        marginLeft: element.left
+                                                                    }} src={element.image} />
+                                                                    <div>{element.label}</div>
+                                                                </ContainerImage>
+                                                            )
+                                                        })}
                                                     </div>
                                                 ) : null}
                                             </div>
