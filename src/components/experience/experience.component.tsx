@@ -38,20 +38,9 @@ import { ReactComponent as US } from "./../../assets/united-states.svg";
 import { ReactComponent as BR } from "./../../assets/brasil.svg";
 
 /* Icons about project technologies */
-import HighCharts from "./../../assets/technologies/highcharts.png";
-import Sass from "./../../assets/technologies/sass.png";
-import Handlebars from "./../../assets/technologies/handlebars.png";
-import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
-import StyledComponents from "../../assets/technologies/styled-components.png";
-import ReactVis from "../../assets/technologies/react-vis.png";
-import ReactIcon from "../../assets/technologies/react.png";
-import Mongo from "./../../assets/technologies/mongo.png";
-import Typescript from "./../../assets/technologies/ts.png";
-import Heroku from "./../../assets/technologies/heroku.png";
-import Node from "./../../assets/technologies/node-js.png";
-import Mongoose from "./../../assets/technologies/mongoose.png";
-import Express from "./../../assets/technologies/express.png";
 import { ReactComponent as MySQL } from "./../../assets/technologies/MySQL-Logo.svg";
+
+import {dkItems, cmItems, english, frontendItems, backendItems} from "./constants";
 
 type Props = {
     value: number;
@@ -126,6 +115,7 @@ const Experience: React.FC = () => {
     const [lampStatusCM, setLampStatusCM] = useState(false);
 
     const [showTechnologies, setShowTechnologies] = useState(false);
+
     const classes = useStyles();
 
     const handleClickAwayDK = () => {
@@ -154,6 +144,7 @@ const Experience: React.FC = () => {
                             <Typography variant="h5" style={{ marginBottom: 20 }}>
                                 {t("frontend-developer")}
                             </Typography>
+
                             {lampStatusDK ?
                                 <>
                                     <ClickAwayListener
@@ -164,26 +155,15 @@ const Experience: React.FC = () => {
                                         <div className={classes.root}>
                                             <LightLamp style={{ width: 50, height: 50 }}
                                                 onMouseLeave={() => setLampStatusDK(false)} />
-                                            {lampStatusDK ? (
-                                                <div className={classes.dropdown}>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 45, height: 35, paddingRight: 2 }} src={ReactIcon} />
-                                                        <div>React</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 30, height: 30, marginRight: 10, marginLeft: 5 }} src={Javascript} />
-                                                        <div>Javascript</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 30, height: 30, marginRight: 10, marginLeft: 5 }} src={StyledComponents} />
-                                                        <div>styled-components</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 30, height: 30, marginRight: 10, marginLeft: 5 }} src={ReactVis} />
-                                                        <div>react-vis</div>
-                                                    </ContainerImage>
-                                                </div>
-                                            ) : null}
+                                            <div className={classes.dropdown}>
+                                                {dkItems.map((element, index) => {
+                                                    return (
+                                                        <ContainerImage key={index}>
+                                                            <img alt={element.label} style={{ width: element.width, height: element.height, paddingRight: element.right, paddingLeft: element.left }} src={element.image} />
+                                                            <div>{element.label}</div>
+                                                        </ContainerImage>)
+                                                })}
+                                            </div>
                                         </div>
                                     </ClickAwayListener>
                                 </> :
@@ -222,30 +202,15 @@ const Experience: React.FC = () => {
                                         <div className={classes.root}>
                                             <LightLamp style={{ width: 50, height: 50 }}
                                                 onMouseLeave={() => setLampStatusCM(false)} />
-                                            {lampStatusCM ? (
-                                                <div className={classes.dropdown}>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 45, height: 35, paddingRight: 2 }} src={ReactIcon} />
-                                                        <div>React</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 30, height: 30, marginRight: 10, marginLeft: 5 }} src={Javascript} />
-                                                        <div>Javascript</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={HighCharts} />
-                                                        <div>Highcharts</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={Sass} />
-                                                        <div>Sass</div>
-                                                    </ContainerImage>
-                                                    <ContainerImage>
-                                                        <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={Handlebars} />
-                                                        <div>Handlebars</div>
-                                                    </ContainerImage>
-                                                </div>
-                                            ) : null}
+                                            <div className={classes.dropdown}>
+                                                {cmItems.map((element, index) => {
+                                                    return (
+                                                        <ContainerImage key={index}>
+                                                            <img alt={element.label} style={{ width: element.width, height: element.height, paddingRight: element.right, paddingLeft: element.left }} src={element.image} />
+                                                            <div>{element.label}</div>
+                                                        </ContainerImage>)
+                                                })}
+                                            </div>
                                         </div>
                                     </ClickAwayListener>
                                 </> :
@@ -276,57 +241,29 @@ const Experience: React.FC = () => {
                     <Languages>
                         <LanguageContainer>
                             <US style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("listening")}
-                                </Typography>
-                                <LinearProgressWithLabel value={90} />
-                            </EachProgress>
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("speaking")}
-                                </Typography>
-                                <LinearProgressWithLabel value={80} />
-                            </EachProgress>
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("reading")}
-                                </Typography>
-                                <LinearProgressWithLabel value={80} />
-                            </EachProgress>
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("writing")}
-                                </Typography>
-                                <LinearProgressWithLabel value={60} />
-                            </EachProgress>
+                            {english.map((element, index) => {
+                                return (
+                                    <EachProgress key={index}>
+                                        <Typography variant="h6" style={{ marginBottom: element.bottom }}>
+                                            {t(element.translation)}
+                                        </Typography>
+                                        <LinearProgressWithLabel value={element.value} />
+                                    </EachProgress>
+                                )
+                            })}
                         </LanguageContainer>
                         <LanguageContainer>
                             <BR style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("listening")}
-                                </Typography>
-                                <LinearProgressWithLabel value={100} />
-                            </EachProgress>
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("speaking")}
-                                </Typography>
-                                <LinearProgressWithLabel value={100} />
-                            </EachProgress>
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("reading")}
-                                </Typography>
-                                <LinearProgressWithLabel value={100} />
-                            </EachProgress>
-                            <EachProgress>
-                                <Typography variant="h6" style={{ marginBottom: 30 }}>
-                                    {t("writing")}
-                                </Typography>
-                                <LinearProgressWithLabel value={100} />
-                            </EachProgress>
+                            {english.map((element, index) => {
+                                return (
+                                    <EachProgress key={index}>
+                                        <Typography variant="h6" style={{ marginBottom: element.bottom }}>
+                                            {t(element.translation)}
+                                        </Typography>
+                                        <LinearProgressWithLabel value={100} />
+                                    </EachProgress>
+                                )
+                            })}
                         </LanguageContainer>
                     </Languages>
 
@@ -345,105 +282,34 @@ const Experience: React.FC = () => {
                                 Frontend
                             </Typography>
                             <TechnologiesContainer>
-                                <ContainerTechImage>
-                                    <img style={{ width: 45, height: 35, paddingRight: 2 }}
-                                        src={ReactIcon} />
-                                    <div>React</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 30,
-                                        height: 30,
-                                        marginRight: 10,
-                                        marginLeft: 5
-                                    }} src={Javascript} />
-                                    <div>Javascript</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 30,
-                                        height: 30,
-                                        marginRight: 10,
-                                        marginLeft: 5
-                                    }} src={StyledComponents} />
-                                    <div>styled-components</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 30,
-                                        height: 30,
-                                        marginRight: 10,
-                                        marginLeft: 5
-                                    }} src={Typescript} />
-                                    <div>Typescript</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{ width: 30, height: 30, marginRight: 10, marginLeft: 5 }} src={ReactVis} />
-                                    <div>react-vis</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={HighCharts} />
-                                    <div>Highcharts</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={Sass} />
-                                    <div>Sass</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{ width: 30, height: 30, paddingRight: 10, marginLeft: 5 }} src={Handlebars} />
-                                    <div>Handlebars</div>
-                                </ContainerTechImage>
+                                {frontendItems.map((element, index) => {
+                                    return (
+                                        <ContainerTechImage key={index}>
+                                            <img alt={element.label} style={{ width: element.width, height: element.height, paddingRight: element.right }}
+                                                src={element.image} />
+                                            <div>{element.label}</div>
+                                        </ContainerTechImage>
+                                    )
+                                })}
                             </TechnologiesContainer>
                             <Typography variant="h5" style={{ marginBottom: 20 }}>
                                 Backend
                             </Typography>
                             <TechnologiesContainer>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 30,
-                                        height: 30,
-                                        marginRight: 10,
-                                        marginLeft: 5
-                                    }} src={Typescript} />
-                                    <div>Typescript</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 40,
-                                        height: 40,
-                                        padding: "0 5px 0 5px",
-                                        marginRight: 10,
-                                        backgroundColor: "#e0e0e0"
-                                    }} src={Node} />
-                                    <div>Node.js</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 60,
-                                        height: 40,
-                                        marginRight: 10,
-                                        marginLeft: 5,
-                                        backgroundColor: "#e0e0e0"
-                                    }} src={Express} />
-                                    <div>Express</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 30,
-                                        height: 30,
-                                        marginRight: 10,
-                                        marginLeft: 5
-                                    }} src={Mongo} />
-                                    <div>Mongo DB</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 42,
-                                        height: 20,
-                                        marginRight: 5,
-                                    }} src={Mongoose} />
-                                    <div>Mongoose</div>
-                                </ContainerTechImage>
+                                {backendItems.map((element, index) => {
+                                    return (
+                                        <ContainerTechImage key={index}>
+                                            <img alt={element.label} style={{
+                                                width: element.width,
+                                                height: element.height,
+                                                marginRight: element.right,
+                                                marginLeft: element.left,
+                                                backgroundColor: element?.background
+                                            }} src={element.image} />
+                                            <div>{element.label}</div>
+                                        </ContainerTechImage>
+                                    )
+                                })}
                                 <ContainerTechImage>
                                     <MySQL style={{
                                         width: 52,
@@ -451,15 +317,6 @@ const Experience: React.FC = () => {
                                         marginRight: 5,
                                     }} />
                                     <div>MySQL</div>
-                                </ContainerTechImage>
-                                <ContainerTechImage>
-                                    <img style={{
-                                        width: 30,
-                                        height: 30,
-                                        marginRight: 10,
-                                        marginLeft: 5
-                                    }} src={Heroku} />
-                                    <div>Heroku</div>
                                 </ContainerTechImage>
                             </TechnologiesContainer>
                         </BoxBorder>

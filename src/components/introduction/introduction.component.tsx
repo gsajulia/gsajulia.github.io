@@ -41,7 +41,7 @@ const Introduction: React.FC = () => {
             <Container>
                 {isMobile ?
                     <ContainerIntroduction>
-                        <img alt="profile image" src={profileImage} />
+                        <img alt="profile" src={profileImage} />
                         <TextContainer>
                             <Typography variant="h4">
                                 {t("greetings1")},
@@ -68,7 +68,7 @@ const Introduction: React.FC = () => {
                             </Typography>
                         </TextContainer>
 
-                        <img alt="profile image" src={profileImage} />
+                        <img alt="profile" src={profileImage} />
                     </ContainerIntroduction>}
                 <SmallTextContainer>
                     <Graduating style={{ width: 50, height: 60, margin: "0 10px 10px 0" }} />
