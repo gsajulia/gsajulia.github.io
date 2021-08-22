@@ -143,8 +143,7 @@ const Projects: React.FC = () => {
                                                     })} />
                                                 {projectInfo.p1 ? (
                                                     <div className={classes.dropdown}>
-                                                        {tcItems.map((element, index) => {
-                                                            return (
+                                                        {tcItems.map((element, index) => (
                                                                 <ContainerImage key={index}>
                                                                     <img alt={element.label} style={{
                                                                         width: element.width,
@@ -154,8 +153,7 @@ const Projects: React.FC = () => {
                                                                     }} src={element.image} />
                                                                     <div>{element.label}</div>
                                                                 </ContainerImage>
-                                                            )
-                                                        })}
+                                                            ))}
                                                     </div>
                                                 ) : null}
                                             </div>
@@ -216,8 +214,7 @@ const Projects: React.FC = () => {
                                                     })} />
                                                 {projectInfo.p2 ? (
                                                     <div className={classes.dropdown}>
-                                                        {vmItems.map((element, index) => {
-                                                            return (
+                                                        {vmItems.map((element, index) => (
                                                                 <ContainerImage key={index}>
                                                                     <img alt={element.label} style={{
                                                                         width: element.width,
@@ -227,8 +224,7 @@ const Projects: React.FC = () => {
                                                                     }} src={element.image} />
                                                                     <div>{element.label}</div>
                                                                 </ContainerImage>
-                                                            )
-                                                        })}
+                                                            ))}
                                                     </div>
                                                 ) : null}
                                             </div>

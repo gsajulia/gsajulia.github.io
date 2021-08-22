@@ -5,10 +5,6 @@ import {
     Container,
     BoxBorder,
     BoxContainer,
-    SmallSpan,
-    TitleContainer,
-    IdeaContainer,
-    ContainerImage,
     LanguageContainer,
     EachProgress,
     Languages,
@@ -19,17 +15,14 @@ import {
 
 /* Material UI */
 import Typography from "@material-ui/core/Typography";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Box from '@material-ui/core/Box';
-import Chip from '@material-ui/core/Chip';
 import { Theme } from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 
 /* Translation */
 import { useTranslation } from "react-i18next";
-import withStyles from "@material-ui/core/styles/withStyles";
 
 /* Icons */
 import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
@@ -37,49 +30,17 @@ import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
 import { ReactComponent as US } from "./../../assets/united-states.svg";
 import { ReactComponent as BR } from "./../../assets/brasil.svg";
 
+/* Components */
+import ExperienceCompanies from "../experience-companies/experience-companies.component";
+
 /* Icons about project technologies */
 import { ReactComponent as MySQL } from "./../../assets/technologies/MySQL-Logo.svg";
 
-import {dkItems, cmItems, english, frontendItems, backendItems} from "./constants";
+import { dkItems, cmItems, english, frontendItems, backendItems, dkConstants, cmConstants } from "./constants";
 
 type Props = {
     value: number;
 };
-
-const AboutTypography = withStyles({
-    root: {
-        color: "#e0e0e0",
-        marginTop: 20
-    }
-})(Typography);
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        position: 'relative',
-        width: 200,
-        display: "flex",
-        justifyContent: "flex-end"
-    },
-    dropdown: {
-        position: 'absolute',
-        top: 60,
-        right: 0,
-        left: 0,
-        zIndex: 1,
-        border: '1px solid',
-        padding: theme.spacing(1),
-        backgroundColor: theme.palette.background.paper,
-        color: "#424242",
-    },
-    rootChip: {
-        display: 'flex',
-        marginBottom: 20,
-        flexWrap: 'wrap',
-        '& > *': {
-            margin: theme.spacing(0.5),
-        },
-    },
-}));
 
 const useStylesProgress = makeStyles<Theme, Props>((theme) => ({
     root: {
@@ -116,14 +77,12 @@ const Experience: React.FC = () => {
 
     const [showTechnologies, setShowTechnologies] = useState(false);
 
-    const classes = useStyles();
-
-    const handleClickAwayDK = () => {
-        setLampStatusDK(false);
+    const handleClickAwayDK = (value: boolean) => {
+        setLampStatusDK(value);
     };
 
-    const handleClickAwayCM = () => {
-        setLampStatusCM(false);
+    const handleClickAwayCM = (value: boolean) => {
+        setLampStatusCM(value);
     };
 
     return (
@@ -139,100 +98,17 @@ const Experience: React.FC = () => {
                     setLampStatusDK(false);
                     setLampStatusCM(false);
                 }}>
-                    <BoxBorder>
-                        <TitleContainer>
-                            <Typography variant="h5" style={{ marginBottom: 20 }}>
-                                {t("frontend-developer")}
-                            </Typography>
 
-                            {lampStatusDK ?
-                                <>
-                                    <ClickAwayListener
-                                        mouseEvent="onMouseDown"
-                                        touchEvent="onTouchStart"
-                                        onClickAway={handleClickAwayDK}
-                                    >
-                                        <div className={classes.root}>
-                                            <LightLamp style={{ width: 50, height: 50 }}
-                                                onMouseLeave={() => setLampStatusDK(false)} />
-                                            <div className={classes.dropdown}>
-                                                {dkItems.map((element, index) => {
-                                                    return (
-                                                        <ContainerImage key={index}>
-                                                            <img alt={element.label} style={{ width: element.width, height: element.height, paddingRight: element.right, paddingLeft: element.left }} src={element.image} />
-                                                            <div>{element.label}</div>
-                                                        </ContainerImage>)
-                                                })}
-                                            </div>
-                                        </div>
-                                    </ClickAwayListener>
-                                </> :
-                                <IdeaContainer onMouseEnter={() => setLampStatusDK(true)}>
-                                    <Lamp style={{ width: 40, height: 40, fill: "#e0e0e0", marginBottom: 5 }} />
-                                    <SmallSpan> + info</SmallSpan>
-                                </IdeaContainer>}
-                        </TitleContainer>
-                        <Typography variant="body1" style={{ marginBottom: 20 }}>
-                            Drakkar <SmallSpan>({t("internship")})</SmallSpan>
-                        </Typography>
-                        <div className={classes.rootChip}>
-                            <Chip style={{ backgroundColor: "#FB87FD", fontWeight: "bold" }} size="small" label="Frontend" />
-                            <Chip style={{ backgroundColor: "pink", fontWeight: "bold" }} size="small" label="Design" />
-                        </div>
-                        <SmallSpan>
-                            {t("drakkar-period")}
-                        </SmallSpan>
-                        <AboutTypography variant="body1">
-                            {t("about-drakkar")}
-                        </AboutTypography>
-                    </BoxBorder>
+                    <ExperienceCompanies items={dkItems}
+                        constants={dkConstants}
+                        lampStatus={lampStatusDK}
+                        handleClickAway={handleClickAwayDK} />
 
-                    <BoxBorder>
-                        <TitleContainer>
-                            <Typography variant="h5" style={{ marginBottom: 20 }}>
-                                {t("frontend-developer")}
-                            </Typography>
-                            {lampStatusCM ?
-                                <>
-                                    <ClickAwayListener
-                                        mouseEvent="onMouseDown"
-                                        touchEvent="onTouchStart"
-                                        onClickAway={handleClickAwayCM}
-                                    >
-                                        <div className={classes.root}>
-                                            <LightLamp style={{ width: 50, height: 50 }}
-                                                onMouseLeave={() => setLampStatusCM(false)} />
-                                            <div className={classes.dropdown}>
-                                                {cmItems.map((element, index) => {
-                                                    return (
-                                                        <ContainerImage key={index}>
-                                                            <img alt={element.label} style={{ width: element.width, height: element.height, paddingRight: element.right, paddingLeft: element.left }} src={element.image} />
-                                                            <div>{element.label}</div>
-                                                        </ContainerImage>)
-                                                })}
-                                            </div>
-                                        </div>
-                                    </ClickAwayListener>
-                                </> :
-                                <IdeaContainer onMouseEnter={() => setLampStatusCM(true)}>
-                                    <Lamp style={{ width: 40, height: 40, fill: "#e0e0e0", marginBottom: 5 }} />
-                                    <SmallSpan> + info</SmallSpan>
-                                </IdeaContainer>}
-                        </TitleContainer>
-                        <Typography variant="body1" style={{ marginBottom: 20 }}>
-                            COWMED <SmallSpan>({t("internship")})</SmallSpan>
-                        </Typography>
-                        <div className={classes.rootChip}>
-                            <Chip style={{ backgroundColor: "#FB87FD", fontWeight: "bold" }} size="small" label="Frontend" />
-                            <Chip style={{ backgroundColor: "pink", fontWeight: "bold" }} size="small" label="Design" />
-                        </div>
-                        <SmallSpan>
-                            {t("cowmed-period")}
-                        </SmallSpan>
-                        <AboutTypography variant="body1">
-                            {t("about-cowmed")}
-                        </AboutTypography>
-                    </BoxBorder>
+                    <ExperienceCompanies items={cmItems}
+                        constants={cmConstants}
+                        lampStatus={lampStatusCM}
+                        handleClickAway={handleClickAwayCM} />
+
                 </BoxContainer>
                 <LanguagesContainer>
                     <Typography variant="h5" style={{ marginBottom: 30 }}>
@@ -241,29 +117,25 @@ const Experience: React.FC = () => {
                     <Languages>
                         <LanguageContainer>
                             <US style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
-                            {english.map((element, index) => {
-                                return (
-                                    <EachProgress key={index}>
-                                        <Typography variant="h6" style={{ marginBottom: element.bottom }}>
-                                            {t(element.translation)}
-                                        </Typography>
-                                        <LinearProgressWithLabel value={element.value} />
-                                    </EachProgress>
-                                )
-                            })}
+                            {english.map((element, index) => (
+                                <EachProgress key={index}>
+                                    <Typography variant="h6" style={{ marginBottom: element.bottom }}>
+                                        {t(element.translation)}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={element.value} />
+                                </EachProgress>
+                            ))}
                         </LanguageContainer>
                         <LanguageContainer>
                             <BR style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
-                            {english.map((element, index) => {
-                                return (
-                                    <EachProgress key={index}>
-                                        <Typography variant="h6" style={{ marginBottom: element.bottom }}>
-                                            {t(element.translation)}
-                                        </Typography>
-                                        <LinearProgressWithLabel value={100} />
-                                    </EachProgress>
-                                )
-                            })}
+                            {english.map((element, index) => (
+                                <EachProgress key={index}>
+                                    <Typography variant="h6" style={{ marginBottom: element.bottom }}>
+                                        {t(element.translation)}
+                                    </Typography>
+                                    <LinearProgressWithLabel value={100} />
+                                </EachProgress>
+                            ))}
                         </LanguageContainer>
                     </Languages>
 
@@ -282,34 +154,30 @@ const Experience: React.FC = () => {
                                 Frontend
                             </Typography>
                             <TechnologiesContainer>
-                                {frontendItems.map((element, index) => {
-                                    return (
-                                        <ContainerTechImage key={index}>
-                                            <img alt={element.label} style={{ width: element.width, height: element.height, paddingRight: element.right }}
-                                                src={element.image} />
-                                            <div>{element.label}</div>
-                                        </ContainerTechImage>
-                                    )
-                                })}
+                                {frontendItems.map((element, index) => (
+                                    <ContainerTechImage key={index}>
+                                        <img alt={element.label} style={{ width: element.width, height: element.height, paddingRight: element.right }}
+                                            src={element.image} />
+                                        <div>{element.label}</div>
+                                    </ContainerTechImage>
+                                ))}
                             </TechnologiesContainer>
                             <Typography variant="h5" style={{ marginBottom: 20 }}>
                                 Backend
                             </Typography>
                             <TechnologiesContainer>
-                                {backendItems.map((element, index) => {
-                                    return (
-                                        <ContainerTechImage key={index}>
-                                            <img alt={element.label} style={{
-                                                width: element.width,
-                                                height: element.height,
-                                                marginRight: element.right,
-                                                marginLeft: element.left,
-                                                backgroundColor: element?.background
-                                            }} src={element.image} />
-                                            <div>{element.label}</div>
-                                        </ContainerTechImage>
-                                    )
-                                })}
+                                {backendItems.map((element, index) => (
+                                    <ContainerTechImage key={index}>
+                                        <img alt={element.label} style={{
+                                            width: element.width,
+                                            height: element.height,
+                                            marginRight: element.right,
+                                            marginLeft: element.left,
+                                            backgroundColor: element?.background
+                                        }} src={element.image} />
+                                        <div>{element.label}</div>
+                                    </ContainerTechImage>
+                                ))}
                                 <ContainerTechImage>
                                     <MySQL style={{
                                         width: 52,

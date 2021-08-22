@@ -22,6 +22,20 @@ export const dkItems = [
     { image: StyledComponents, label: "styled-components", width: 30, height: 30, left: 5, right: 10 },
     { image: ReactVis, label: "react-vis", width: 30, height: 30, left: 5, right: 10 }];
 
+export const dkConstants = { roleLabel: "frontend-developer",
+                             name: "Drakkar",
+                             periodLabel: "drakkar-period", 
+                             aboutLabel: "about-drakkar", 
+                             chip: [{id: 1, name: "Frontend"},
+                                    {id: 3, name: "Design"}]};
+
+export const cmConstants = { roleLabel: "frontend-developer",
+                            name: "COWMED",
+                            periodLabel: "cowmed-period", 
+                            aboutLabel: "about-cowmed", 
+                            chip: [{id: 1, name: "Frontend"},
+                                    {id: 3, name: "Design"}]};
+
 export const cmItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
     { image: Javascript, label: "Javascript", width: 30, height: 30, left: 5, right: 10 },
