@@ -5,8 +5,6 @@ import {
   Container,
   BoxBorder,
   BoxContainer,
-  LanguageContainer,
-  EachProgress,
   Languages,
   LanguagesContainer,
   TechnologiesContainer,
@@ -15,17 +13,12 @@ import {
 
 /* Material UI */
 import Typography from "@material-ui/core/Typography";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import LinearProgress from "@material-ui/core/LinearProgress";
-import Box from "@material-ui/core/Box";
-import { Theme } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 
 /* Translation */
 import { useTranslation } from "react-i18next";
 
 /* Icons */
-import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
 import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
 import { ReactComponent as US } from "./../../assets/united-states.svg";
 import { ReactComponent as BR } from "./../../assets/brasil.svg";
@@ -33,6 +26,7 @@ import { ReactComponent as BR } from "./../../assets/brasil.svg";
 /* Components */
 import ExperienceCompanies from "../experience-companies/experience-companies.component";
 import ExperienceLanguages from "../experience-languages/experience-languages.component";
+import ExperienceTecnologies from "../experience-tecnologies/experience-tecnologies.component";
 
 /* Icons about project technologies */
 import { ReactComponent as MySQL } from "./../../assets/technologies/MySQL-Logo.svg";
@@ -100,6 +94,7 @@ const Experience: React.FC = () => {
           <Typography variant="h5" style={{ marginBottom: 30 }}>
             {t("languages")}
           </Typography>
+
           <Languages>
             <ExperienceLanguages language={english}>
               <US style={{ width: 50, height: 50, margin: "0 0 30px 0" }} />
@@ -134,41 +129,14 @@ const Experience: React.FC = () => {
                 Frontend
               </Typography>
               <TechnologiesContainer>
-                {frontendItems.map((element, index) => (
-                  <ContainerTechImage key={index}>
-                    <img
-                      alt={element.label}
-                      style={{
-                        width: element.width,
-                        height: element.height,
-                        paddingRight: element.right,
-                      }}
-                      src={element.image}
-                    />
-                    <div>{element.label}</div>
-                  </ContainerTechImage>
-                ))}
+                <ExperienceTecnologies items={frontendItems} />
               </TechnologiesContainer>
+
               <Typography variant="h5" style={{ marginBottom: 20 }}>
                 Backend
               </Typography>
               <TechnologiesContainer>
-                {backendItems.map((element, index) => (
-                  <ContainerTechImage key={index}>
-                    <img
-                      alt={element.label}
-                      style={{
-                        width: element.width,
-                        height: element.height,
-                        marginRight: element.right,
-                        marginLeft: element.left,
-                        backgroundColor: element?.background,
-                      }}
-                      src={element.image}
-                    />
-                    <div>{element.label}</div>
-                  </ContainerTechImage>
-                ))}
+                <ExperienceTecnologies items={backendItems} />
                 <ContainerTechImage>
                   <MySQL
                     style={{
