@@ -26,15 +26,15 @@ export const dkConstants = { roleLabel: "frontend-developer",
                              name: "Drakkar",
                              periodLabel: "drakkar-period", 
                              aboutLabel: "about-drakkar", 
-                             chip: [{id: 1, name: "Frontend"},
-                                    {id: 3, name: "Design"}]};
+                             chip: [{label: "Frontend", background: "#FB87FD"},
+                                    {label: "Design", background: "pink"}]};
 
 export const cmConstants = { roleLabel: "frontend-developer",
                             name: "COWMED",
                             periodLabel: "cowmed-period", 
                             aboutLabel: "about-cowmed", 
-                            chip: [{id: 1, name: "Frontend"},
-                                    {id: 3, name: "Design"}]};
+                            chip: [{label: "Frontend", background: "#FB87FD"},
+                                    {label: "Design", background: "pink"}]};
 
 export const cmItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },

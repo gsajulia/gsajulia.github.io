@@ -39,7 +39,7 @@ import {
   backendItems,
   dkConstants,
   cmConstants,
-  portuguese,
+  portuguese
 } from "./constants";
 
 const Experience: React.FC = () => {

@@ -6,9 +6,7 @@ import CarouselComponent from "../carousel/carousel.component";
 /* Styles */
 import {
   Box,
-  Container,
   BoxContainer,
-  ContainerImage,
   SmallSpan,
   IdeaContainer,
   TitleContainer,
