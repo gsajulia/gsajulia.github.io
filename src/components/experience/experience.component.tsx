@@ -26,7 +26,7 @@ import { ReactComponent as BR } from "./../../assets/brasil.svg";
 /* Components */
 import ExperienceCompanies from "../experience-companies/experience-companies.component";
 import ExperienceLanguages from "../experience-languages/experience-languages.component";
-import ExperienceTecnologies from "../experience-tecnologies/experience-tecnologies.component";
+import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
 
 /* Icons about project technologies */
 import { ReactComponent as MySQL } from "./../../assets/technologies/MySQL-Logo.svg";
@@ -129,14 +129,14 @@ const Experience: React.FC = () => {
                 Frontend
               </Typography>
               <TechnologiesContainer>
-                <ExperienceTecnologies moreSpacing items={frontendItems} />
+                <TecnologiesOfElements moreSpacing items={frontendItems} />
               </TechnologiesContainer>
 
               <Typography variant="h5" style={{ marginBottom: 20 }}>
                 Backend
               </Typography>
               <TechnologiesContainer>
-                <ExperienceTecnologies moreSpacing items={backendItems} />
+                <TecnologiesOfElements moreSpacing items={backendItems} />
                 <ContainerTechImage>
                   <MySQL
                     style={{

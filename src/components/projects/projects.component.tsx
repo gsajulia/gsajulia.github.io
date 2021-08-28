@@ -28,7 +28,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Chip from "@material-ui/core/Chip";
 
 /* Components */
-import ExperienceTecnologies from "../experience-tecnologies/experience-tecnologies.component";
+import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
 
 /* Translation */
 import { useTranslation } from "react-i18next";
@@ -124,7 +124,7 @@ const Projects: FC<ProjectsProps> = ({
 
                     {projectInfo[actualProject] ? (
                       <div className={classes.dropdown}>
-                        <ExperienceTecnologies
+                        <TecnologiesOfElements
                           moreSpacing={false}
                           items={projectInfoItems}
                         />

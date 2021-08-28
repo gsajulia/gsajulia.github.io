@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Style */
-import { ContainerTechImage } from "./experience-tecnologies.styles";
+import { ContainerTechImage } from "./tecnologies-of-element.styles";
 
 interface TecnologiesProps {
   items: Array<{
@@ -16,7 +16,7 @@ interface TecnologiesProps {
   moreSpacing?: boolean;
 }
 
-const ExperienceTecnologies: React.FC<TecnologiesProps> = ({
+const TecnologiesOfElements: React.FC<TecnologiesProps> = ({
   items,
   moreSpacing,
 }) => {
@@ -43,4 +43,4 @@ const ExperienceTecnologies: React.FC<TecnologiesProps> = ({
   );
 };
 
-export default ExperienceTecnologies;
+export default TecnologiesOfElements;
