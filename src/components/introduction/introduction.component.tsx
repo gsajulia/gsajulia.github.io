@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 /* Styles */
 import {
-    ContainerIntroduction,
-    TextContainer,
-    Container,
-    SiteReference,
-    SmallTextContainer,
-    SmallSpan
-} from './introduction.styles';
+  ContainerIntroduction,
+  TextContainer,
+  Container,
+  SiteReference,
+  SmallTextContainer,
+  SmallSpan,
+} from "./introduction.styles";
 
 /* Images */
 import profileImage from "../../assets/profile-image-pink.png";
@@ -19,74 +19,59 @@ import { ReactComponent as Stars } from "./../../assets/stars.svg";
 
 /* Material UI */
 import Typography from "@material-ui/core/Typography";
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 /* Translation */
 import { useTranslation } from "react-i18next";
 
 const Introduction: React.FC = () => {
-    const { t } = useTranslation();
-    const isMobile = useMediaQuery('(max-width: 1450px)');
+  const { t } = useTranslation();
+  const isMobile = useMediaQuery("(max-width: 1450px)");
 
-    const yearsOfExperience = (): number => {
-        const date:string[] = new Date().toISOString().split("-");
-        const actualYear: number = +date[0];
-        let year = +2018;
+  const yearsOfExperience = (): number => {
+    const date: string[] = new Date().toISOString().split("-");
+    const actualYear: number = +date[0];
+    let year = +2018;
 
-        return (actualYear - year) - 1;
-    };
+    return actualYear - year - 1;
+  };
 
-    return (
-        <>
-            <Container>
-                {isMobile ?
-                    <ContainerIntroduction>
-                        <img alt="profile" src={profileImage} />
-                        <TextContainer>
-                            <Typography variant="h4">
-                                {t("greetings1")},
-                        </Typography>
-                            <Typography variant="h4" style={{ marginBottom: 20 }}>
-                                {t("greetings2")} <span style={{ color: "#FB87FD" }}>{t("frontend-developer")}</span>!
-                        </Typography>
-                            <Typography variant="h6">
-                                {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
-                            </Typography>
-                        </TextContainer>
+  return (
+    <>
+      <Container>
+        <ContainerIntroduction>
+          {isMobile ? <img alt="profile" src={profileImage} /> : null}
+          <TextContainer>
+            <Typography variant="h4">{t("greetings1")},</Typography>
+            <Typography variant="h4" style={{ marginBottom: 20 }}>
+              {t("greetings2")}{" "}
+              <span style={{ color: "#FB87FD" }}>
+                {t("frontend-developer")}
+              </span>
+              !
+            </Typography>
+            <Typography variant="h6">
+              {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
+            </Typography>
+          </TextContainer>
+          {!isMobile ? <img alt="profile" src={profileImage} /> : null}
+        </ContainerIntroduction>
 
-                    </ContainerIntroduction> :
-                    <ContainerIntroduction>
-                        <TextContainer>
-                            <Typography variant="h4">
-                                {t("greetings1")},
-                        </Typography>
-                            <Typography variant="h4" style={{ marginBottom: 20 }}>
-                                {t("greetings2")} <span style={{ color: "#FB87FD" }}>{t("frontend-developer")}</span>!
-                        </Typography>
-                            <Typography variant="h6">
-                                {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
-                            </Typography>
-                        </TextContainer>
+        <SmallTextContainer>
+          <Graduating
+            style={{ width: 50, height: 60, margin: "0 10px 10px 0" }}
+          />
+          {`${t("graduating")} `} <SmallSpan>{" (2017-2022) "}</SmallSpan>-
+          <SiteReference href="https://www.ufsm.br/">{t("ufsm")}</SiteReference>
+        </SmallTextContainer>
 
-                        <img alt="profile" src={profileImage} />
-                    </ContainerIntroduction>}
-                <SmallTextContainer>
-                    <Graduating style={{ width: 50, height: 60, margin: "0 10px 10px 0" }} />
-                    {`${t("graduating")} `} <SmallSpan>{" (2017-2022) "}</SmallSpan>
-                    -
-                    <SiteReference href="https://www.ufsm.br/">
-                        {t("ufsm")}
-                    </SiteReference>
-                </SmallTextContainer>
-                
-                <SmallTextContainer>
-                    <Stars style={{ width: 45, height: 50, margin: "0 10px 10px 5px" }} />
-                    {t("technologies-introduction")} </SmallTextContainer>
-
-            </Container>
-        </>
-    )
-
-}
+        <SmallTextContainer>
+          <Stars style={{ width: 45, height: 50, margin: "0 10px 10px 5px" }} />
+          {t("technologies-introduction")}{" "}
+        </SmallTextContainer>
+      </Container>
+    </>
+  );
+};
 
 export default Introduction;
