@@ -23,7 +23,6 @@ import { Typography } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
-import Chip from "@material-ui/core/Chip";
 
 /* Components */
 import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";

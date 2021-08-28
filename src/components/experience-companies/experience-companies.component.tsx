@@ -5,13 +5,10 @@ import {
   BoxBorder,
   SmallSpan,
   TitleContainer,
-  IdeaContainer,
-  ContainerImage,
 } from "./experience-companies.styles";
 
 /* Material UI */
 import Typography from "@material-ui/core/Typography";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
 /* Translation */
@@ -20,10 +17,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 /* Component */
 import Chips from "../chips/chips.component";
-
-/* Icons */
-import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
-import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
+import IdeaOfTechnologies from "../idea-of-tech/idea-of-tech.component";
 
 const AboutTypography = withStyles({
   root: {
@@ -33,23 +27,6 @@ const AboutTypography = withStyles({
 })(Typography);
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    position: "relative",
-    width: 200,
-    display: "flex",
-    justifyContent: "flex-end",
-  },
-  dropdown: {
-    position: "absolute",
-    top: 60,
-    right: 0,
-    left: 0,
-    zIndex: 1,
-    border: "1px solid",
-    padding: theme.spacing(1),
-    backgroundColor: theme.palette.background.paper,
-    color: "#424242",
-  },
   rootChip: {
     display: "flex",
     marginBottom: 20,
@@ -96,60 +73,18 @@ const ExperienceCompanies: React.FC<CompaniesProps> = ({
         <Typography variant="h5" style={{ marginBottom: 20 }}>
           {t(constants.roleLabel)}
         </Typography>
-
-        {lampStatus ? (
-          <>
-            <ClickAwayListener
-              mouseEvent="onMouseDown"
-              touchEvent="onTouchStart"
-              onClickAway={() => handleClickAway(false)}
-            >
-              <div className={classes.root}>
-                <LightLamp
-                  style={{ width: 50, height: 50 }}
-                  onMouseLeave={() => handleClickAway(false)}
-                />
-                <div className={classes.dropdown}>
-                  {items.map((element, index) => (
-                    <ContainerImage key={index}>
-                      <img
-                        alt={element.label}
-                        style={{
-                          width: element.width,
-                          height: element.height,
-                          paddingRight: element.right,
-                          paddingLeft: element.left,
-                        }}
-                        src={element.image}
-                      />
-                      <div>{element.label}</div>
-                    </ContainerImage>
-                  ))}
-                </div>
-              </div>
-            </ClickAwayListener>
-          </>
-        ) : (
-          <IdeaContainer onMouseEnter={() => handleClickAway(true)}>
-            <Lamp
-              style={{
-                width: 40,
-                height: 40,
-                fill: "#e0e0e0",
-                marginBottom: 5,
-              }}
-            />
-            <SmallSpan> + info</SmallSpan>
-          </IdeaContainer>
-        )}
+        
+        <IdeaOfTechnologies
+          items={items}
+          lampStatus={lampStatus}
+          handleHover={handleClickAway}
+        />
       </TitleContainer>
       <Typography variant="body1" style={{ marginBottom: 20 }}>
         {constants.name} <SmallSpan>({t("internship")})</SmallSpan>
       </Typography>
       <div className={classes.rootChip}>
-        <Chips
-          items={constants.chip !== undefined ? constants.chip : []}
-        />
+        <Chips items={constants.chip !== undefined ? constants.chip : []} />
       </div>
       <SmallSpan>{t(constants.periodLabel)}</SmallSpan>
       <AboutTypography variant="body1">
