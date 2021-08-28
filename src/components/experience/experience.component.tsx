@@ -129,14 +129,14 @@ const Experience: React.FC = () => {
                 Frontend
               </Typography>
               <TechnologiesContainer>
-                <ExperienceTecnologies items={frontendItems} />
+                <ExperienceTecnologies moreSpacing items={frontendItems} />
               </TechnologiesContainer>
 
               <Typography variant="h5" style={{ marginBottom: 20 }}>
                 Backend
               </Typography>
               <TechnologiesContainer>
-                <ExperienceTecnologies items={backendItems} />
+                <ExperienceTecnologies moreSpacing items={backendItems} />
                 <ContainerTechImage>
                   <MySQL
                     style={{

@@ -12,7 +12,7 @@ import { ReactComponent as Stars } from "./../../assets/stars.svg";
 import Header from "./../../components/header/header.component";
 import Introduction from "./../../components/introduction/introduction.component";
 import Experience from "../../components/experience/experience.component";
-import Projects from "./../../components/projects/projects.component";
+import AllProjects from "../../components/all-projects/all-projects.component";
 // import './i18n/config';
 
 /* Translation */
@@ -29,7 +29,7 @@ const MainPage: React.FC = () => {
             <a id="experience" />
             <Experience />
             <a id="projects" />
-            <Projects />
+            <AllProjects />
             <Footer>
                 <EmailContainer>
                     <SmallTextContainer>

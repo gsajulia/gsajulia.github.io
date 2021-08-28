@@ -1,9 +1,7 @@
 import React from "react";
 
 /* Style */
-import {
-  ContainerTechImage,
-} from "./experience-tecnologies.styles";
+import { ContainerTechImage } from "./experience-tecnologies.styles";
 
 interface TecnologiesProps {
   items: Array<{
@@ -15,13 +13,17 @@ interface TecnologiesProps {
     right: number;
     background?: string;
   }>;
+  moreSpacing?: boolean;
 }
 
-const ExperienceTecnologies: React.FC<TecnologiesProps> = ({ items }) => {
+const ExperienceTecnologies: React.FC<TecnologiesProps> = ({
+  items,
+  moreSpacing,
+}) => {
   return (
     <>
       {items.map((element, index) => (
-        <ContainerTechImage key={index}>
+        <ContainerTechImage moreSpacing={moreSpacing} key={index}>
           <img
             alt={element.label}
             style={{
