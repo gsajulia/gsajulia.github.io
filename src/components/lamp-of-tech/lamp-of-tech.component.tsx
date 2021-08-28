@@ -5,7 +5,7 @@ import {
   SmallSpan,
   IdeaContainer,
   ContainerImage,
-} from "./idea-of-tech.styles";
+} from "./lamp-of-tech.styles";
 
 /* Material UI */
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";

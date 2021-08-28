@@ -25,7 +25,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 /* Components */
 import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
 import Chips from "../chips/chips.component";
-import IdeaOfTechnologies from "../idea-of-tech/idea-of-tech.component";
+import IdeaOfTechnologies from "../lamp-of-tech/lamp-of-tech.component";
 
 /* Translation */
 import { useTranslation } from "react-i18next";

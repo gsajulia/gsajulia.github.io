@@ -17,7 +17,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 /* Component */
 import Chips from "../chips/chips.component";
-import IdeaOfTechnologies from "../idea-of-tech/idea-of-tech.component";
+import IdeaOfTechnologies from "../lamp-of-tech/lamp-of-tech.component";
 
 const AboutTypography = withStyles({
   root: {
