@@ -14,22 +14,11 @@ export const BoxContainer = styled.div`
     margin: 5vw;
 `;
 
-export const SmallSpan = styled.span` 
-    font-size: 15px;
-    color: #e0e0e0;
-`;
-
 export const ContainerImage = styled.div` 
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
-`;
-
-export const IdeaContainer = styled.span` 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 `;
 
 export const TitleContainer = styled.div` 

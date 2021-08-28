@@ -11,6 +11,9 @@ import {
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 
+/* Component */
+import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
+
 /* Icons */
 import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
 import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
@@ -47,10 +50,13 @@ interface lampProps {
     right: number;
   }>;
   lampStatus: boolean;
-  handleHover: (value: boolean) => void;
+  handleClickAway: () => void;
+  handleHoverEnter: (actualProject: string) => void;
+  moreSpacing: boolean;
+  idItem: string;
 }
 
-const IdeaOfTechnologies: FC<lampProps> = ({lampStatus, handleHover, items}) => {
+const IdeaOfTechnologies: FC<lampProps> = ({lampStatus, handleClickAway, handleHoverEnter, items, moreSpacing, idItem}) => {
   const classes = useStyles();
 
   return lampStatus ? (
@@ -58,35 +64,21 @@ const IdeaOfTechnologies: FC<lampProps> = ({lampStatus, handleHover, items}) => 
       <ClickAwayListener
         mouseEvent="onMouseDown"
         touchEvent="onTouchStart"
-        onClickAway={() => handleHover(false)}
+        onClickAway={handleClickAway}
       >
         <div className={classes.root}>
           <LightLamp
             style={{ width: 50, height: 50 }}
-            onMouseLeave={() => handleHover(false)}
+            onMouseLeave={handleClickAway}
           />
           <div className={classes.dropdown}>
-            {items.map((element, index) => (
-              <ContainerImage key={index}>
-                <img
-                  alt={element.label}
-                  style={{
-                    width: element.width,
-                    height: element.height,
-                    paddingRight: element.right,
-                    paddingLeft: element.left,
-                  }}
-                  src={element.image}
-                />
-                <div>{element.label}</div>
-              </ContainerImage>
-            ))}
+            <TecnologiesOfElements moreSpacing={moreSpacing} items={items} />
           </div>
         </div>
       </ClickAwayListener>
     </>
   ) : (
-    <IdeaContainer onMouseEnter={() => handleHover(true)}>
+    <IdeaContainer onMouseEnter={() => handleHoverEnter(idItem)}>
       <Lamp
         style={{
           width: 40,

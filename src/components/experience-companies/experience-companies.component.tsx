@@ -54,7 +54,9 @@ interface CompaniesProps {
     chip: Array<{ label: string; background: string }>;
   };
   lampStatus: boolean;
-  handleClickAway: (value: boolean) => void;
+  handleClickAway: () => void;
+  handleHoverEnter: (actualProject: string) => void;
+  idItem: string;
 }
 
 const ExperienceCompanies: React.FC<CompaniesProps> = ({
@@ -62,6 +64,8 @@ const ExperienceCompanies: React.FC<CompaniesProps> = ({
   lampStatus,
   handleClickAway,
   items,
+  handleHoverEnter,
+  idItem,
 }) => {
   const { t } = useTranslation();
 
@@ -77,8 +81,12 @@ const ExperienceCompanies: React.FC<CompaniesProps> = ({
         <IdeaOfTechnologies
           items={items}
           lampStatus={lampStatus}
-          handleHover={handleClickAway}
+          idItem={idItem}
+          handleClickAway={handleClickAway}
+          handleHoverEnter={handleHoverEnter}
+          moreSpacing={false}
         />
+
       </TitleContainer>
       <Typography variant="body1" style={{ marginBottom: 20 }}>
         {constants.name} <SmallSpan>({t("internship")})</SmallSpan>

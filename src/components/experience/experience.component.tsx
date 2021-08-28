@@ -39,30 +39,40 @@ import {
   backendItems,
   dkConstants,
   cmConstants,
-  portuguese
+  portuguese,
 } from "./constants";
 
 const Experience: React.FC = () => {
   const { t } = useTranslation();
-  const [lampStatusDK, setLampStatusDK] = useState(false);
-  const [lampStatusCM, setLampStatusCM] = useState(false);
+  const [companyInfo, setCompanyInfo] = useState({
+    c1: false,
+    c2: false,
+  });
 
   const [showTechnologies, setShowTechnologies] = useState(false);
 
-  const handleClickAwayDK = (value: boolean) => {
-    setLampStatusDK(value);
+  const handleClickAway = () => {
+    setCompanyInfo({
+      c1: false,
+      c2: false,
+    });
   };
 
-  const handleClickAwayCM = (value: boolean) => {
-    setLampStatusCM(value);
+  const handleHoverEnter = (actualProject: string) => {
+    setCompanyInfo((prevState) => ({
+      ...prevState,
+      [actualProject]: true,
+    }));
   };
 
   return (
     <>
       <Container
         onMouseLeave={() => {
-          setLampStatusDK(false);
-          setLampStatusCM(false);
+          setCompanyInfo({
+            c1: false,
+            c2: false,
+          });
         }}
       >
         <Typography variant="h4" style={{ marginBottom: 20 }}>
@@ -71,22 +81,28 @@ const Experience: React.FC = () => {
 
         <BoxContainer
           onMouseLeave={() => {
-            setLampStatusDK(false);
-            setLampStatusCM(false);
+            setCompanyInfo({
+              c1: false,
+              c2: false,
+            });
           }}
         >
           <ExperienceCompanies
             items={dkItems}
             constants={dkConstants}
-            lampStatus={lampStatusDK}
-            handleClickAway={handleClickAwayDK}
+            lampStatus={companyInfo["c1"]}
+            idItem={"c1"}
+            handleClickAway={handleClickAway}
+            handleHoverEnter={handleHoverEnter}
           />
 
           <ExperienceCompanies
             items={cmItems}
             constants={cmConstants}
-            lampStatus={lampStatusCM}
-            handleClickAway={handleClickAwayCM}
+            lampStatus={companyInfo["c2"]}
+            idItem={"c2"}
+            handleClickAway={handleClickAway}
+            handleHoverEnter={handleHoverEnter}
           />
         </BoxContainer>
 
@@ -109,7 +125,7 @@ const Experience: React.FC = () => {
           <Typography variant="h5" style={{ marginBottom: 30 }}>
             {t("all-technologies")}
           </Typography>
-          <Button
+          {/* <Button
             variant="contained"
             style={{ backgroundColor: "#1f1c21", border: "1px solid #B485FF" }}
             onClick={() => {
@@ -122,7 +138,7 @@ const Experience: React.FC = () => {
               onMouseLeave={() => setLampStatusCM(false)}
             />{" "}
             {showTechnologies ? t("hide") : t("show")}
-          </Button>
+          </Button> */}
           {showTechnologies ? (
             <BoxBorder style={{ maxWidth: 500 }}>
               <Typography variant="h5" style={{ marginBottom: 20 }}>

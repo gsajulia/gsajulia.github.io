@@ -7,8 +7,6 @@ import CarouselComponent from "../carousel/carousel.component";
 import {
   Box,
   BoxContainer,
-  SmallSpan,
-  IdeaContainer,
   TitleContainer,
   SiteReference,
   TextContainer,
@@ -27,6 +25,7 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 /* Components */
 import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
 import Chips from "../chips/chips.component";
+import IdeaOfTechnologies from "../idea-of-tech/idea-of-tech.component";
 
 /* Translation */
 import { useTranslation } from "react-i18next";
@@ -109,45 +108,14 @@ const Projects: FC<ProjectsProps> = ({
             <Typography variant="h4" style={{ marginBottom: 20 }}>
               {text?.title}
             </Typography>
-            {projectInfo[actualProject] ? (
-              <>
-                <ClickAwayListener
-                  mouseEvent="onMouseDown"
-                  touchEvent="onTouchStart"
-                  onClickAway={handleClickAway}
-                >
-                  <div className={classes.root}>
-                    <LightLamp
-                      style={{ width: 50, height: 50 }}
-                      onMouseLeave={handleClickAway}
-                    />
-
-                    {projectInfo[actualProject] ? (
-                      <div className={classes.dropdown}>
-                        <TecnologiesOfElements
-                          moreSpacing={false}
-                          items={projectInfoItems}
-                        />
-                      </div>
-                    ) : null}
-                  </div>
-                </ClickAwayListener>
-              </>
-            ) : (
-              <IdeaContainer
-                onMouseEnter={() => handleHoverEnter(actualProject)}
-              >
-                <Lamp
-                  style={{
-                    width: 40,
-                    height: 40,
-                    fill: "#e0e0e0",
-                    marginBottom: 5,
-                  }}
-                />
-                <SmallSpan> + info</SmallSpan>
-              </IdeaContainer>
-            )}
+            <IdeaOfTechnologies
+              items={projectInfoItems}
+              lampStatus={projectInfo[actualProject]}
+              handleClickAway={handleClickAway}
+              idItem={actualProject}
+              handleHoverEnter={handleHoverEnter}
+              moreSpacing={false}
+            />
           </TitleContainer>
           {website.exist ? (
             <SiteReference href={website?.url}>
