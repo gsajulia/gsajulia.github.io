@@ -49,6 +49,12 @@ export const english = [
     { translation: "reading", bottom: 30, value: 80 },
     { translation: "writing", bottom: 30, value: 60 }];
 
+export const portuguese = [
+    { translation: "listening", bottom: 30, value: 100 },
+    { translation: "speaking", bottom: 30, value: 100 },
+    { translation: "reading", bottom: 30, value: 100 },
+    { translation: "writing", bottom: 30, value: 100 }];
+
 export const frontendItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
     { image: Javascript, label: "Javascript", width: 30, height: 30, left: 5, right: 10 },
