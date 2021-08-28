@@ -24,7 +24,7 @@ import Projects from "./../projects/projects.component";
 /* Translation */
 import { useTranslation } from "react-i18next";
 
-import { tcItems, vmItems } from "./constants";
+import { tcItems, tcChips, vmItems, vmChips } from "./constants";
 
 const AllProjects: React.FC = () => {
 const [projectInfo, setProjectInfo] = useState({
@@ -73,7 +73,8 @@ const [projectInfo, setProjectInfo] = useState({
           projectInfoItems={tcItems}
           actualProject="p1"
           text={{title: "Time Control", description: "time-control-description"}}
-          website={{exist: true, url: "https://game-time-control.herokuapp.com/", urlName: "game-time-control.herokuapp.com"}}/>
+          website={{exist: true, url: "https://game-time-control.herokuapp.com/", urlName: "game-time-control.herokuapp.com"}}
+          chips={tcChips}/>
 
         <Projects 
           carrouselItems={vacinemeItems}
@@ -83,7 +84,8 @@ const [projectInfo, setProjectInfo] = useState({
           projectInfoItems={vmItems}
           actualProject="p2"
           text={{title: "Vacinemesm", description: "vacineme-description"}}
-          website={{exist: false}}/>
+          website={{exist: false}}
+          chips={vmChips}/>
       </Container>
     </>
   );

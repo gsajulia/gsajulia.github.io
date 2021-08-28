@@ -29,6 +29,7 @@ import Chip from "@material-ui/core/Chip";
 
 /* Components */
 import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
+import Chips from "../chips/chips.component";
 
 /* Translation */
 import { useTranslation } from "react-i18next";
@@ -85,6 +86,7 @@ interface ProjectsProps {
   actualProject: string;
   text: { title: string; description: string };
   website: { exist: boolean; url?: string; urlName?: string };
+  chips?: Array<{ label: string; background: string }>;
 }
 
 const Projects: FC<ProjectsProps> = ({
@@ -96,6 +98,7 @@ const Projects: FC<ProjectsProps> = ({
   text,
   website,
   carrouselItems,
+  chips,
 }) => {
   const classes = useStyles();
 
@@ -158,16 +161,7 @@ const Projects: FC<ProjectsProps> = ({
             {t(text.description)}
           </AboutTypography>
           <div className={classes.rootChip}>
-            <Chip
-              style={{ backgroundColor: "#FB87FD", fontWeight: "bold" }}
-              size="small"
-              label="Frontend"
-            />
-            <Chip
-              style={{ backgroundColor: "pink", fontWeight: "bold" }}
-              size="small"
-              label="Design"
-            />
+            <Chips items={chips !== undefined ? chips : []} />
           </div>
         </TextContainer>
 

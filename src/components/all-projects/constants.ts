@@ -20,6 +20,14 @@ export const tcItems = [
     { image: Mongoose, label: "Mongoose", width: 42, height: 20, left: 0, right: 5 },
     { image: Heroku, label: "Heroku", width: 30, height: 30, left: 5, right: 10 }];
 
+export const tcChips = [
+    {label: "Frontend", background: "#FB87FD"},
+    {label: "Backend", background: "#5CE1E6"},
+    {label: "Design", background: "pink"}];
+
+export const vmChips = [
+    {label: "Frontend", background: "#FB87FD"}];
+
 export const vmItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
     { image: Javascript, label: "Javascript", width: 30, height: 30, left: 5, right: 10 },
