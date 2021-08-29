@@ -10,7 +10,6 @@ import {
   TitleContainer,
   SiteReference,
   TextContainer,
-  GithubReference,
   ContainerImage,
 } from "./projects.styles";
 
@@ -148,9 +147,9 @@ const Projects: FC<ProjectsProps> = ({
                 }}
                 src={Github}
               />
-              <GithubReference href={github?.url}>
+              <SiteReference href={github?.url}>
                 {github?.urlName}
-              </GithubReference>
+              </SiteReference>
             </ContainerImage>
           ) : null}
           <AboutTypography variant="body1">
