@@ -31,7 +31,7 @@ import { useTranslation } from "react-i18next";
 
 /* Icons */
 import Github from "./../../assets/technologies/github.png";
-import { ReactComponent as Stars } from "./../../assets/stars.svg";
+import Sparkle from "./../../assets/technologies/sparkles.png";
 
 const AboutTypography = withStyles({
   root: {
@@ -124,12 +124,14 @@ const Projects: FC<ProjectsProps> = ({
           </TitleContainer>
           {website.exist ? (
             <ContainerImage>
-              <Stars
+              <img
+                alt="StarsIcon"
                 style={{
                   width: 30,
                   height: 30,
                   marginRight: 10,
                 }}
+                src={Sparkle}
               />
               <SiteReference href={website?.url}>
                 {website?.urlName}
