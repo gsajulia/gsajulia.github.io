@@ -125,7 +125,7 @@ const Experience: React.FC = () => {
           <Typography variant="h5" style={{ marginBottom: 30 }}>
             {t("all-technologies")}
           </Typography>
-          {/* <Button
+          <Button
             variant="contained"
             style={{ backgroundColor: "#1f1c21", border: "1px solid #B485FF" }}
             onClick={() => {
@@ -135,10 +135,10 @@ const Experience: React.FC = () => {
           >
             <LightLamp
               style={{ width: 40, height: 40, marginRight: 20 }}
-              onMouseLeave={() => setLampStatusCM(false)}
-            />{" "}
+              onMouseLeave={handleClickAway}
+            />
             {showTechnologies ? t("hide") : t("show")}
-          </Button> */}
+          </Button>
           {showTechnologies ? (
             <BoxBorder style={{ maxWidth: 500 }}>
               <Typography variant="h5" style={{ marginBottom: 20 }}>

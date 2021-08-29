@@ -8,6 +8,9 @@ import Heroku from "./../../assets/technologies/heroku.png";
 import Node from "./../../assets/technologies/node-js.png";
 import Mongoose from "./../../assets/technologies/mongoose.png";
 import Express from "./../../assets/technologies/express.png";
+import R from "./../../assets/technologies/R_logo.png";
+import NN from "./../../assets/technologies/neural.png";
+import Shiny from "./../../assets/technologies/shiny.png";
 
 export const tcItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
@@ -32,3 +35,14 @@ export const vmItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
     { image: Javascript, label: "Javascript", width: 30, height: 30, left: 5, right: 10 },
     { image: StyledComponents, label: "styled-components", width: 30, height: 30, left: 5, right: 10 }];
+
+export const fpChips = [
+    {label: "Frontend", background: "#FB87FD"},
+    {label: "Data Sciece", background: "#e57373"},
+    {label: "Design", background: "pink"},
+    {label: "construction", background: "#ffcb6b", translate: true}];
+
+export const fpItems = [
+    { image: R, label: "R", width: 35, height: 30, left: 2, right: 10 },
+    { image: NN, label: "Neural Network", width: 30, height: 30, left: 5, right: 10 },
+    { image: Shiny, label: "R Shiny", width: 30, height: 30, left: 5, right: 10 }];

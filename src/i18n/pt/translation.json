@@ -23,6 +23,7 @@
   "about-cowmed": "Empresa que atua no monitoramento de animais, nela fiz parte da equipe de frontend, dando manutenção e fazendo a migração de jQuery para React ao sistema que permite o acompanhamento dos ruminantes remotamente.",
   "drakkar-period": "mar. 2020 - abr. 2021",
   "cowmed-period": "out. 2018 - out. 2019",
+  "foraminifera-period": "Sistema feito para prever características de foraminíferos utilizando modelos de Redes neurais.",
   "internship": "Estágio",
   "writing": "Escrita",
   "speaking": "Fala",
@@ -36,5 +37,7 @@
   "developed-by": "Desenvolvido por",
   "icons-made-by": "Ícones feitos por",
   "and": "e",
-  "from": "de"
+  "from": "de",
+
+  "construction": "Trabalho em progresso"
 }
