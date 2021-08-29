@@ -38,7 +38,7 @@ export const vmItems = [
 
 export const fpChips = [
     {label: "Frontend", background: "#FB87FD"},
-    {label: "Data Sciece", background: "#e57373"},
+    {label: "Data Science", background: "#e57373"},
     {label: "Design", background: "pink"},
     {label: "construction", background: "#ffcb6b", translate: true}];
 

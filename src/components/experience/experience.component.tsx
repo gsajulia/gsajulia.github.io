@@ -37,6 +37,7 @@ import {
   english,
   frontendItems,
   backendItems,
+  dataScienceItems,
   dkConstants,
   cmConstants,
   portuguese,
@@ -163,6 +164,12 @@ const Experience: React.FC = () => {
                   />
                   <div>MySQL</div>
                 </ContainerTechImage>
+              </TechnologiesContainer>
+              <Typography variant="h5" style={{ marginBottom: 20 }}>
+                Data Science
+              </Typography>
+              <TechnologiesContainer>
+                <TecnologiesOfElements moreSpacing items={dataScienceItems} />
               </TechnologiesContainer>
             </BoxBorder>
           ) : null}
