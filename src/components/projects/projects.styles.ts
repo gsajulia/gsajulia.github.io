@@ -39,3 +39,11 @@ export const SiteReference = styled.a`
     }
 `;
 
+export const GithubReference = styled.a` 
+    color: #FB87FD;
+    text-decoration:none;
+    &:hover {
+        color: #fbb2fd; 
+    }
+`;
+

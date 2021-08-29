@@ -10,6 +10,8 @@ import {
   TitleContainer,
   SiteReference,
   TextContainer,
+  GithubReference,
+  ContainerImage,
 } from "./projects.styles";
 
 /* Icons */
@@ -20,15 +22,17 @@ import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
 import { Typography } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 
 /* Components */
-import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
 import Chips from "../chips/chips.component";
 import IdeaOfTechnologies from "../lamp-of-tech/lamp-of-tech.component";
 
 /* Translation */
 import { useTranslation } from "react-i18next";
+
+/* Icons */
+import Github from "./../../assets/technologies/github.png";
+import { ReactComponent as Stars } from "./../../assets/stars.svg";
 
 const AboutTypography = withStyles({
   root: {
@@ -83,6 +87,7 @@ interface ProjectsProps {
   text: { title: string; description: string };
   website: { exist: boolean; url?: string; urlName?: string };
   chips?: Array<{ label: string; background: string }>;
+  github: { exist: boolean; url?: string; urlName?: string };
 }
 
 const Projects: FC<ProjectsProps> = ({
@@ -93,6 +98,7 @@ const Projects: FC<ProjectsProps> = ({
   projectInfoItems,
   text,
   website,
+  github,
   carrouselItems,
   chips,
 }) => {
@@ -118,9 +124,34 @@ const Projects: FC<ProjectsProps> = ({
             />
           </TitleContainer>
           {website.exist ? (
-            <SiteReference href={website?.url}>
-              {website?.urlName}
-            </SiteReference>
+            <ContainerImage>
+              <Stars
+                style={{
+                  width: 30,
+                  height: 30,
+                  marginRight: 10,
+                }}
+              />
+              <SiteReference href={website?.url}>
+                {website?.urlName}
+              </SiteReference>
+            </ContainerImage>
+          ) : null}
+          {github.exist ? (
+            <ContainerImage>
+              <img
+                alt="GithubIcon"
+                style={{
+                  width: 30,
+                  height: 30,
+                  marginRight: 10,
+                }}
+                src={Github}
+              />
+              <GithubReference href={github?.url}>
+                {github?.urlName}
+              </GithubReference>
+            </ContainerImage>
           ) : null}
           <AboutTypography variant="body1">
             {t(text.description)}

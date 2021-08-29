@@ -100,6 +100,9 @@ const AllProjects: React.FC = () => {
             url: "https://game-time-control.herokuapp.com/",
             urlName: "game-time-control.herokuapp.com",
           }}
+          github={{
+            exist: false
+          }}
           chips={tcChips}
         />
 
@@ -115,6 +118,11 @@ const AllProjects: React.FC = () => {
             description: "foraminifera-period",
           }}
           website={{ exist: false }}
+          github={{
+            exist: true,
+            url: "https://github.com/gsajulia/TCC-foraminifera-predictor",
+            urlName: "gsajulia/TCC-foraminifera-predictor",
+          }}
           chips={fpChips}
         />
 
@@ -127,6 +135,9 @@ const AllProjects: React.FC = () => {
           actualProject="p2"
           text={{ title: "Vacinemesm", description: "vacineme-description" }}
           website={{ exist: false }}
+          github={{
+            exist: false
+          }}
           chips={vmChips}
         />
       </Container>
