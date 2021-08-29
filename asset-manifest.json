@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.19de92da.chunk.css",
-    "main.js": "/static/js/main.91ff54d4.chunk.js",
-    "main.js.map": "/static/js/main.91ff54d4.chunk.js.map",
+    "main.js": "/static/js/main.650b3c8b.chunk.js",
+    "main.js.map": "/static/js/main.650b3c8b.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.451c4837.js",
     "runtime-main.js.map": "/static/js/runtime-main.451c4837.js.map",
     "static/js/2.2b7722e7.chunk.js": "/static/js/2.2b7722e7.chunk.js",
@@ -20,7 +20,7 @@
     "static/media/css.286a9900.png": "/static/media/css.286a9900.png",
     "static/media/express.915b8962.png": "/static/media/express.915b8962.png",
     "static/media/github.1be3365d.svg": "/static/media/github.1be3365d.svg",
-    "static/media/github.4bb93a1b.png": "/static/media/github.4bb93a1b.png",
+    "static/media/github.28a5d90e.png": "/static/media/github.28a5d90e.png",
     "static/media/graduating.42463af7.svg": "/static/media/graduating.42463af7.svg",
     "static/media/highcharts.26edf589.png": "/static/media/highcharts.26edf589.png",
     "static/media/html5.dce04abb.png": "/static/media/html5.dce04abb.png",
@@ -39,6 +39,7 @@
     "static/media/register.5c689c77.png": "/static/media/register.5c689c77.png",
     "static/media/sass.95b95881.png": "/static/media/sass.95b95881.png",
     "static/media/shiny.ec1590fe.png": "/static/media/shiny.ec1590fe.png",
+    "static/media/sparkles.9a80a2e0.png": "/static/media/sparkles.9a80a2e0.png",
     "static/media/stars.45ae8127.svg": "/static/media/stars.45ae8127.svg",
     "static/media/styled-components.67fab711.png": "/static/media/styled-components.67fab711.png",
     "static/media/ts.534c8e2b.png": "/static/media/ts.534c8e2b.png",
@@ -48,6 +49,6 @@
     "static/js/runtime-main.451c4837.js",
     "static/js/2.2b7722e7.chunk.js",
     "static/css/main.19de92da.chunk.css",
-    "static/js/main.91ff54d4.chunk.js"
+    "static/js/main.650b3c8b.chunk.js"
   ]
 }
