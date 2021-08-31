@@ -51,7 +51,8 @@ const Introduction: React.FC = () => {
               !
             </Typography>
             <Typography variant="h6">
-              {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
+              {/* {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`} */}
+              {`${t("about-me-1")} 3 ${t("about-me-2")}`}
             </Typography>
           </TextContainer>
           {!isMobile ? <img alt="profile" src={profileImage} /> : null}
@@ -61,7 +62,7 @@ const Introduction: React.FC = () => {
           <Graduating
             style={{ width: 50, height: 60, margin: "0 10px 10px 0" }}
           />
-          {`${t("graduating")} `} <SmallSpan>{" (2017-2022) "}</SmallSpan>-
+          {`${t("graduating")} `} {` - ${t("course")} `}<SmallSpan>{" (2017-2022) "}</SmallSpan>|
           <SiteReference href="https://www.ufsm.br/">{t("ufsm")}</SiteReference>
         </SmallTextContainer>
 
