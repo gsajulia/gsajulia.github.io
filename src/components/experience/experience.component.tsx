@@ -10,7 +10,8 @@ import {
   TechnologiesContainer,
   ContainerTechImage,
   ExperienceContainer,
-  ExperienceContainerLarge
+  ExperienceContainerLarge,
+  AllTechnologies
 } from "./experience.styles";
 
 /* Material UI */
@@ -136,55 +137,57 @@ const Experience: React.FC = () => {
         </LanguagesContainer>
 
         <LanguagesContainer>
-          <Typography variant="h5" style={{ marginBottom: 30 }}>
+        <Typography variant="h5" style={{ marginBottom: 30 }}>
             {t("all-technologies")}
           </Typography>
-          <Button
-            variant="contained"
-            style={{ backgroundColor: "#1f1c21", border: "1px solid #B485FF" }}
-            onClick={() => {
-              setShowTechnologies(!showTechnologies);
-            }}
-            color="secondary"
-          >
-            <LightLamp
-              style={{ width: 40, height: 40, marginRight: 20 }}
-            />
-            {showTechnologies ? t("hide") : t("show")}
-          </Button>
-          {showTechnologies ? (
-            <BoxBorder style={{ maxWidth: 500 }}>
-              <Typography variant="h5" style={{ marginBottom: 20 }}>
-                Frontend
-              </Typography>
-              <TechnologiesContainer>
-                <TecnologiesOfElements moreSpacing items={frontendItems} />
-              </TechnologiesContainer>
+          <AllTechnologies>
+            <Button
+              variant="contained"
+              style={{ backgroundColor: "#1f1c21", border: "1px solid #B485FF", width: '100%' }}
+              onClick={() => {
+                setShowTechnologies(!showTechnologies);
+              }}
+              color="secondary"
+            >
+              <LightLamp
+                style={{ width: 40, height: 40, marginRight: 20 }}
+              />
+              {showTechnologies ? t("hide") : t("show")}
+            </Button>
+            {showTechnologies ? (
+              <BoxBorder style={{ maxWidth: 500 }}>
+                <Typography variant="h5" style={{ marginBottom: 20 }}>
+                  Frontend
+                </Typography>
+                <TechnologiesContainer>
+                  <TecnologiesOfElements moreSpacing items={frontendItems} />
+                </TechnologiesContainer>
 
-              <Typography variant="h5" style={{ marginBottom: 20 }}>
-                Backend
-              </Typography>
-              <TechnologiesContainer>
-                <TecnologiesOfElements moreSpacing items={backendItems} />
-                <ContainerTechImage>
-                  <MySQL
-                    style={{
-                      width: 52,
-                      height: 50,
-                      marginRight: 5,
-                    }}
-                  />
-                  <div>MySQL</div>
-                </ContainerTechImage>
-              </TechnologiesContainer>
-              <Typography variant="h5" style={{ marginBottom: 20 }}>
-                Data Science
-              </Typography>
-              <TechnologiesContainer>
-                <TecnologiesOfElements moreSpacing items={dataScienceItems} />
-              </TechnologiesContainer>
-            </BoxBorder>
-          ) : null}
+                <Typography variant="h5" style={{ marginBottom: 20 }}>
+                  Backend
+                </Typography>
+                <TechnologiesContainer>
+                  <TecnologiesOfElements moreSpacing items={backendItems} />
+                  <ContainerTechImage>
+                    <MySQL
+                      style={{
+                        width: 52,
+                        height: 50,
+                        marginRight: 5,
+                      }}
+                    />
+                    <div>MySQL</div>
+                  </ContainerTechImage>
+                </TechnologiesContainer>
+                <Typography variant="h5" style={{ marginBottom: 20 }}>
+                  Data Science
+                </Typography>
+                <TechnologiesContainer>
+                  <TecnologiesOfElements moreSpacing items={dataScienceItems} />
+                </TechnologiesContainer>
+              </BoxBorder>
+            ) : null}
+          </AllTechnologies>
         </LanguagesContainer>
       </Container>
     </>

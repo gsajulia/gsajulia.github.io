@@ -60,6 +60,17 @@ export const LanguagesContainer = styled.div`
     }
 `;
 
+export const AllTechnologies = styled.div` 
+    margin: 2vw 7vw 0 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media only screen and (max-width: 700px) {
+        margin: 40px 10px 40px 10px;
+    }
+`;
+
 export const TechnologiesContainer = styled.div` 
     display: flex;
     flex-wrap: wrap;
