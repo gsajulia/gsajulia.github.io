@@ -9,7 +9,8 @@ import {
   LanguagesContainer,
   TechnologiesContainer,
   ContainerTechImage,
-  ExperienceContainer
+  ExperienceContainer,
+  ExperienceContainerLarge
 } from "./experience.styles";
 
 /* Material UI */
@@ -79,7 +80,7 @@ const Experience: React.FC = () => {
         </Typography>
 
         <BoxContainer>
-          <ExperienceContainer size='100%'>
+          <ExperienceContainerLarge>
             <ExperienceCompanies
               items={flItems}
               constants={flConstants}
@@ -90,9 +91,9 @@ const Experience: React.FC = () => {
               internship={false}
               actual
             />
-          </ExperienceContainer>
+          </ExperienceContainerLarge>
 
-          <ExperienceContainer size={`${window.innerWidth < 700 ? '100%' : '50%'}`}>
+          <ExperienceContainer>
             <ExperienceCompanies
               items={dkItems}
               constants={dkConstants}
@@ -105,7 +106,7 @@ const Experience: React.FC = () => {
             />
           </ExperienceContainer>
 
-          <ExperienceContainer size={`${window.innerWidth < 700 ? '100%' : '50%'}`}>
+          <ExperienceContainer>
             <ExperienceCompanies
               items={cmItems}
               constants={cmConstants}
