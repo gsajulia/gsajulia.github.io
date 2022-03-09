@@ -106,8 +106,8 @@ const Projects: FC<ProjectsProps> = ({
   const { t } = useTranslation();
 
   return (
-    <BoxContainer onMouseLeave={handleClickAway}>
-      <Box onMouseLeave={handleClickAway}>
+    <BoxContainer>
+      <Box>
         <TextContainer>
           <TitleContainer>
             <Typography variant="h4" style={{ marginBottom: 20 }}>

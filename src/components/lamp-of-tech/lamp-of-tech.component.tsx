@@ -58,18 +58,15 @@ interface lampProps {
 
 const IdeaOfTechnologies: FC<lampProps> = ({lampStatus, handleClickAway, handleHoverEnter, items, moreSpacing, idItem}) => {
   const classes = useStyles();
-
+  
   return lampStatus ? (
     <>
       <ClickAwayListener
-        mouseEvent="onMouseDown"
-        touchEvent="onTouchStart"
         onClickAway={handleClickAway}
       >
         <div className={classes.root}>
           <LightLamp
             style={{ width: 50, height: 50 }}
-            onMouseLeave={handleClickAway}
           />
           <div className={classes.dropdown}>
             <TecnologiesOfElements moreSpacing={moreSpacing} items={items} />
@@ -78,7 +75,8 @@ const IdeaOfTechnologies: FC<lampProps> = ({lampStatus, handleClickAway, handleH
       </ClickAwayListener>
     </>
   ) : (
-    <IdeaContainer onMouseEnter={() => handleHoverEnter(idItem)}>
+    <IdeaContainer onClick={() =>
+            handleHoverEnter(idItem)}>
       <Lamp
         style={{
           width: 40,

@@ -125,17 +125,17 @@ const Header: React.FC = () => {
                         <IconButton component={Button} onClick={() => window.open("https://www.linkedin.com/in/j%C3%BAlia-gabriela-santi-acosta-78393ba9/")} aria-label="show 17 new notifications" color="inherit">
                             <Linkedin style={{ width: 30, height: 30, fill: "#fff" }} />
                         </IconButton>
-                        <Tooltip title={`${t("switch-language")}`}>
-                            {actualLanguage === "pt" ?
-                                <IconButton aria-label="show 17 new notifications" color="inherit"
-                                    component={Button} onClick={handleClick}>
-                                    <BR style={{ width: 30, height: 30 }} />
-                                </IconButton> :
-                                <IconButton aria-label="show 17 new notifications" color="inherit"
-                                    component={Button} onClick={handleClick}>
-                                    <US style={{ width: 30, height: 30 }} />
-                                </IconButton>}
-                        </Tooltip>
+                        <div>
+                            <IconButton aria-label="show 17 new notifications" color="inherit"
+                                component={Button} onClick={() => changeLanguage("en")}>
+                                <US style={{ width: 30, height: 30 }} />
+                            </IconButton>
+                            <IconButton aria-label="show 17 new notifications" color="inherit"
+                                component={Button} onClick={() => changeLanguage("pt")}>
+                                <BR style={{ width: 30, height: 30 }} />
+                            </IconButton>
+                        </div>
+
                         <StyledMenu
                             id="simple-menu"
                             anchorEl={anchorEl}

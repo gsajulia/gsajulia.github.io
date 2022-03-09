@@ -11,8 +11,9 @@
   "about-me-1": "I have been working with software development for over ",
   "about-me-2": " years. I work with Javascript, and the most diverse frontend technologies, such as React and Styled-components, always seeking to improve myself, whether in new technologies or those I already know. I love frontend, design, communicating with the team and I am always waiting for new challenges!",
   "frontend-developer": "Frontend developer",
-  "graduating": "Graduating",
-  "technologies-introduction": "See the technologies I use hovering + info in the cards",
+  "software-engineer": "Software Engineer",
+  "graduate": "Graduate",
+  "technologies-introduction": "See the technologies I use clicking + info in the cards",
   "ufsm": "Federal University of Santa Maria",
   "course": "Information Systems",
   "languages": "Languages",
@@ -23,6 +24,8 @@
   "experience-skills": "Experience & Skills",
   "about-drakkar": "A company specialized in agriculture and precision, in which I led the group and participated in the construction of the frontend of a web system (PWA) in the area of ​​people management that assists managers in making strategic decisions.",
   "about-cowmed": "A company that operates in animal monitoring, I was part of the frontend team, maintaining and migrating from jQuery to React the system that allows the monitoring of ruminants remotely.",
+  "about-fetchly": "Company that provides services for several projects, currently I'm working mainly on creating a robust system for selling wines acting as Fullstack Developer.",
+  "fetchly-period": "sep. 2021 - now",
   "drakkar-period": "mar. 2020 - apr. 2021",
   "cowmed-period": "oct. 2018 - oct. 2019",
   "foraminifera-period": "System designed to predict foraminifera characteristics using neural network models.",
@@ -41,6 +44,7 @@
   "and": "and",
   "from": "from",
 
-  "construction": "Work in progress"
+  "construction": "Work in progress",
+  "actual": "Actual"
 
 }

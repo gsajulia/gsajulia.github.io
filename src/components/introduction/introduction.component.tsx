@@ -62,7 +62,7 @@ const Introduction: React.FC = () => {
           <Graduating
             style={{ width: 50, height: 60, margin: "0 10px 10px 0" }}
           />
-          {`${t("graduating")} `} {` - ${t("course")} `}<SmallSpan>{" (2017-2022) "}</SmallSpan>|
+          {`${t("graduate")} `} {` - ${t("course")} `}<SmallSpan>{" (2017-2022) "}</SmallSpan>|
           <SiteReference href="https://www.ufsm.br/">{t("ufsm")}</SiteReference>
         </SmallTextContainer>
 

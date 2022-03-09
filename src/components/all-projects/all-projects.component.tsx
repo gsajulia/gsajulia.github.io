@@ -71,15 +71,7 @@ const AllProjects: React.FC = () => {
 
   return (
     <>
-      <Container
-        onMouseLeave={() => {
-          setProjectInfo({
-            p1: false,
-            p2: false,
-            p3: false,
-          });
-        }}
-      >
+      <Container>
         <Typography variant="h4" style={{ marginBottom: 20 }}>
           <span style={{ color: "#FB87FD" }}>{t("projects")}</span>
         </Typography>

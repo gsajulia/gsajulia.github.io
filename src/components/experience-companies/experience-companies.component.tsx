@@ -5,11 +5,13 @@ import {
   BoxBorder,
   SmallSpan,
   TitleContainer,
+  AboutContainer
 } from "./experience-companies.styles";
 
 /* Material UI */
 import Typography from "@material-ui/core/Typography";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+//import useMediaQuery from '@mui/material/useMediaQuery';
 
 /* Translation */
 import { useTranslation } from "react-i18next";
@@ -18,6 +20,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 /* Component */
 import Chips from "../chips/chips.component";
 import IdeaOfTechnologies from "../lamp-of-tech/lamp-of-tech.component";
+
+//const matches = useMediaQuery('(min-width:700px)');
 
 const AboutTypography = withStyles({
   root: {
@@ -57,6 +61,8 @@ interface CompaniesProps {
   handleClickAway: () => void;
   handleHoverEnter: (actualProject: string) => void;
   idItem: string;
+  internship: boolean;
+  actual: boolean;
 }
 
 const ExperienceCompanies: React.FC<CompaniesProps> = ({
@@ -66,6 +72,8 @@ const ExperienceCompanies: React.FC<CompaniesProps> = ({
   items,
   handleHoverEnter,
   idItem,
+  internship,
+  actual
 }) => {
   const { t } = useTranslation();
 
@@ -74,9 +82,14 @@ const ExperienceCompanies: React.FC<CompaniesProps> = ({
   return (
     <BoxBorder>
       <TitleContainer>
-        <Typography variant="h5" style={{ marginBottom: 20 }}>
-          {t(constants.roleLabel)}
-        </Typography>
+        <div style={{display: "flex", flexDirection: "row"}}>
+          <Typography variant="h5" style={{ marginBottom: 20, marginRight: 20 }}>
+            {t(constants.roleLabel)}
+          </Typography>
+          {actual && <Chips items={[{label: t("actual"),
+          color: '#000',
+          background: "#00FF9F"}]}/>}
+        </div>
         
         <IdeaOfTechnologies
           items={items}
@@ -88,16 +101,19 @@ const ExperienceCompanies: React.FC<CompaniesProps> = ({
         />
 
       </TitleContainer>
+      
       <Typography variant="body1" style={{ marginBottom: 20 }}>
-        {constants.name} <SmallSpan>({t("internship")})</SmallSpan>
+        {constants.name} {internship && <SmallSpan>({t("internship")})</SmallSpan>}
       </Typography>
       <div className={classes.rootChip}>
         <Chips items={constants.chip !== undefined ? constants.chip : []} />
       </div>
       <SmallSpan>{t(constants.periodLabel)}</SmallSpan>
-      <AboutTypography variant="body1">
-        {t(constants.aboutLabel)}
-      </AboutTypography>
+      <AboutContainer>
+        <AboutTypography variant="body1">
+          {t(constants.aboutLabel)}
+        </AboutTypography>
+      </AboutContainer>
     </BoxBorder>
   );
 };

@@ -9,6 +9,7 @@ import {
   LanguagesContainer,
   TechnologiesContainer,
   ContainerTechImage,
+  ExperienceContainer
 } from "./experience.styles";
 
 /* Material UI */
@@ -34,6 +35,8 @@ import { ReactComponent as MySQL } from "./../../assets/technologies/MySQL-Logo.
 import {
   dkItems,
   cmItems,
+  flConstants,
+  flItems,
   english,
   frontendItems,
   backendItems,
@@ -48,6 +51,7 @@ const Experience: React.FC = () => {
   const [companyInfo, setCompanyInfo] = useState({
     c1: false,
     c2: false,
+    c3: false,
   });
 
   const [showTechnologies, setShowTechnologies] = useState(false);
@@ -56,6 +60,7 @@ const Experience: React.FC = () => {
     setCompanyInfo({
       c1: false,
       c2: false,
+      c3: false,
     });
   };
 
@@ -68,43 +73,50 @@ const Experience: React.FC = () => {
 
   return (
     <>
-      <Container
-        onMouseLeave={() => {
-          setCompanyInfo({
-            c1: false,
-            c2: false,
-          });
-        }}
-      >
+      <Container>
         <Typography variant="h4" style={{ marginBottom: 20 }}>
           <span style={{ color: "#FB87FD" }}>{t("experience-skills")}</span>
         </Typography>
 
-        <BoxContainer
-          onMouseLeave={() => {
-            setCompanyInfo({
-              c1: false,
-              c2: false,
-            });
-          }}
-        >
-          <ExperienceCompanies
-            items={dkItems}
-            constants={dkConstants}
-            lampStatus={companyInfo["c1"]}
-            idItem={"c1"}
-            handleClickAway={handleClickAway}
-            handleHoverEnter={handleHoverEnter}
-          />
+        <BoxContainer>
+          <ExperienceContainer size='100%'>
+            <ExperienceCompanies
+              items={flItems}
+              constants={flConstants}
+              lampStatus={companyInfo["c3"]}
+              idItem={"c3"}
+              handleClickAway={handleClickAway}
+              handleHoverEnter={handleHoverEnter}
+              internship={false}
+              actual
+            />
+          </ExperienceContainer>
 
-          <ExperienceCompanies
-            items={cmItems}
-            constants={cmConstants}
-            lampStatus={companyInfo["c2"]}
-            idItem={"c2"}
-            handleClickAway={handleClickAway}
-            handleHoverEnter={handleHoverEnter}
-          />
+          <ExperienceContainer size={`${window.innerWidth < 700 ? '100%' : '50%'}`}>
+            <ExperienceCompanies
+              items={dkItems}
+              constants={dkConstants}
+              lampStatus={companyInfo["c1"]}
+              idItem={"c1"}
+              handleClickAway={handleClickAway}
+              handleHoverEnter={handleHoverEnter}
+              internship={false}
+              actual={false}
+            />
+          </ExperienceContainer>
+
+          <ExperienceContainer size={`${window.innerWidth < 700 ? '100%' : '50%'}`}>
+            <ExperienceCompanies
+              items={cmItems}
+              constants={cmConstants}
+              lampStatus={companyInfo["c2"]}
+              idItem={"c2"}
+              handleClickAway={handleClickAway}
+              handleHoverEnter={handleHoverEnter}
+              internship
+              actual={false}
+            />
+          </ExperienceContainer>
         </BoxContainer>
 
         <LanguagesContainer>
@@ -136,7 +148,6 @@ const Experience: React.FC = () => {
           >
             <LightLamp
               style={{ width: 40, height: 40, marginRight: 20 }}
-              onMouseLeave={handleClickAway}
             />
             {showTechnologies ? t("hide") : t("show")}
           </Button>

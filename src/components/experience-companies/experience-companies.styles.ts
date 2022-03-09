@@ -5,6 +5,13 @@ export const SmallSpan = styled.span`
     color: #e0e0e0;
 `;
 
+export const AboutContainer = styled.div` 
+    height: 130px;
+    @media only screen and (max-width: 700px) {
+        height: 200px;
+    }
+`;
+
 export const BoxBorder = styled.div` 
     border: 1px solid #5CE1E6;
     margin: 1vw;

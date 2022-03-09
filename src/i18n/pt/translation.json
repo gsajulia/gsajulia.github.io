@@ -11,8 +11,9 @@
   "about-me-1": "Trabalho com desenvolvimento de software a mais de ",
   "about-me-2": "anos. Atuo com Javascript, e as mais diversas tecnologias de frontend, como React e Styled-components, sempre buscando me aperfeiçoar, seja em novas tecnologias ou nas que já conheço. Adoro frontend, design, me comunicar com a equipe e sempre estou a espera de novos desafios!",
   "frontend-developer": "Desenvolvedora Frontend",
-  "graduating": "Graduanda",
-  "technologies-introduction": "Veja as tecnologias que utilizo no + info dos cards",
+  "software-engineer": "Engenheira de Software",
+  "graduate": "Bacharel",
+  "technologies-introduction": "Veja as tecnologias que utilizo clicando no + info dos cards",
   "ufsm": "Universidade Federal de Santa Maria",
   "course": "Sistemas de informação",
   "languages": "Idiomas",
@@ -22,6 +23,8 @@
   "experience-skills": "Experiência & Habilidades",
   "about-drakkar": "Empresa especialista em agricultura e precisão, nela liderei o grupo e participei na construção do frontend de um sistema web (PWA) na área de gestão de pessoas que auxilia gerentes na tomada de decisões de forma estratégica.",
   "about-cowmed": "Empresa que atua no monitoramento de animais, nela fiz parte da equipe de frontend, dando manutenção e fazendo a migração de jQuery para React ao sistema que permite o acompanhamento dos ruminantes remotamente.",
+  "about-fetchly": "Empresa que presta serviços para diversos projetos, atualmente estou trabalhando principalmente na criação de um sistema roubusto de venda de vinhos atuando como Fullstack Developer.",
+  "fetchly-period": "set. 2021 - agora",
   "drakkar-period": "mar. 2020 - abr. 2021",
   "cowmed-period": "out. 2018 - out. 2019",
   "foraminifera-period": "Sistema feito para prever características de foraminíferos utilizando modelos de Redes neurais.",
@@ -40,5 +43,6 @@
   "and": "e",
   "from": "de",
 
-  "construction": "Trabalho em progresso"
+  "construction": "Trabalho em progresso",
+  "actual": "Atual"
 }

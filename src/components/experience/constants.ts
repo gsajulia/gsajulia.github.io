@@ -19,6 +19,23 @@ import R from "./../../assets/technologies/R_logo.png";
 import NN from "./../../assets/technologies/neural.png";
 import Shiny from "./../../assets/technologies/shiny.png";
 import Python from "./../../assets/technologies/python.png";
+import Ruby from "../../assets/technologies/ruby.png";
+import ReactNative from "../../assets/technologies/react-native.png";
+
+export const flItems = [
+    { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
+    { image: Javascript, label: "Javascript", width: 30, height: 30, left: 5, right: 10 },
+    { image: css, label: "CSS", width: 30, height: 30, left: 5, right: 10 },
+    { image: Ruby, label: "Ruby", width: 30, height: 30, left: 5, right: 10 },
+    { image: ReactNative, label: "React Native", width: 30, height: 30, left: 5, right: 10 }];
+
+export const flConstants = { roleLabel: "software-engineer",
+                            name: "Fetchly Labs",
+                            periodLabel: "fetchly-period", 
+                            aboutLabel: "about-fetchly", 
+                            chip: [
+                                {label: "Frontend", background: "#FB87FD"},
+                            {label: "Backend", background: "#5CE1E6"},]};
 
 export const dkItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },
@@ -49,9 +66,9 @@ export const cmItems = [
 
 export const english = [
     { translation: "listening", bottom: 30, value: 90 },
-    { translation: "speaking", bottom: 30, value: 80 },
-    { translation: "reading", bottom: 30, value: 80 },
-    { translation: "writing", bottom: 30, value: 60 }];
+    { translation: "speaking", bottom: 30, value: 85 },
+    { translation: "reading", bottom: 30, value: 85 },
+    { translation: "writing", bottom: 30, value: 70 }];
 
 export const portuguese = [
     { translation: "listening", bottom: 30, value: 100 },
@@ -69,11 +86,13 @@ export const frontendItems = [
     { image: ReactVis, label: "react-vis", width: 30, height: 30, left: 5, right: 10 },
     { image: Handlebars, label: "Handlebars", width: 30, height: 30, left: 5, right: 10 },
     { image: css, label: "CSS", width: 30, height: 30, left: 5, right: 10 },
-    { image: html, label: "HTML", width: 30, height: 30, left: 5, right: 10 }];
+    { image: html, label: "HTML", width: 30, height: 30, left: 5, right: 10 },
+    { image: ReactNative, label: "React Native", width: 30, height: 30, left: 5, right: 10 }];
 
 export const backendItems = [
     { image: Typescript, label: "Typescript", width: 30, height: 30, left: 5, right: 10 },
     { image: Node, label: "Node.js", width: 40, height: 40, left: 0, right: 10, background: "#e0e0e0" },
+    { image: Ruby, label: "Ruby", width: 30, height: 30, left: 5, right: 10 },
     { image: Express, label: "Express", width: 60, height: 40, left: 5, right: 10, background: "#e0e0e0" },
     { image: Mongo, label: "Mongo DB", width: 30, height: 30, left: 5, right: 10 },
     { image: Mongoose, label: "Mongoose", width: 42, height: 20, left: 0, right: 5 },

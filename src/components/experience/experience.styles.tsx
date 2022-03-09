@@ -1,4 +1,7 @@
 import styled from 'styled-components/macro';
+interface Props {
+    size?: string;
+  }
 
 export const Container = styled.div` 
     margin: 6vw 7vw 0 10vw;
@@ -17,10 +20,15 @@ export const BoxBorder = styled.div`
     }
 `;
 
+export const ExperienceContainer = styled.div` 
+    width: ${(props: Props) => props.size}
+`;
+
 export const BoxContainer = styled.div` 
     display: flex;
     flex-direction: row;
     margin: 5vw;
+    flex-wrap: wrap;
     @media only screen and (max-width: 700px) {
         margin: 10px;
         flex-direction: column;
