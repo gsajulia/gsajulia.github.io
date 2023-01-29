@@ -22,7 +22,8 @@ const MainPage: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <MuiThemeProvider theme={MyTheme}>
+        // <MuiThemeProvider theme={MyTheme}>
+        <>
             <Header />
             <a id="introduction" />
             <Introduction />
@@ -47,7 +48,8 @@ const MainPage: React.FC = () => {
                     </div>
                 </SiteReferenceContainer>
             </Footer>
-        </MuiThemeProvider>
+            {/* </MuiThemeProvider> */}
+            </>
     )
 }
 

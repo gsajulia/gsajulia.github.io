@@ -12,19 +12,58 @@ export const ContainerIntroduction = styled.div`
     }
 `;
 
+export const Row = styled.div` 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5vw;
+`;
+
 export const TextContainer = styled.div` 
     display: flex;
     flex-direction: column;
-    margin: 8vw 8vw 0 0;
+    align-self: center;
+
     @media only screen and (max-width: 700px) {
         margin: 10px;
     }
 `;
 
 export const Container = styled.div` 
-    margin: 3vw 7vw 0 10vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5vw 5vw 0 5vw;
+
     @media only screen and (max-width: 700px) {
         margin: 10px 5px 0 5px;
+    }
+
+
+    #world {
+        animation: rotate linear 6s infinite;
+        transform-origin: center; 
+        transform-box: fill-box;
+        stroke: #ff66c4;
+    }
+
+    #image0_206_13 {
+        stroke: none;
+    }
+
+    @keyframes rotate{
+        0%   {stroke: rgb(251, 135, 253);}
+        25%  {stroke: #B485FF;}
+        50% {stroke: #5CE1E6;}
+        75%  {stroke: #B485FF;}
+        100%  {stroke: rgb(216, 135, 253);}
+        
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
 `;
 

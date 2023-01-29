@@ -68,10 +68,6 @@ const Header: React.FC = () => {
         setValue(newValue);
     };
 
-    const handleClick = (event: any) => {
-        setAnchorEl(event.currentTarget);
-    };
-
     const handleClose = () => {
         setAnchorEl(null);
     };
@@ -91,19 +87,8 @@ const Header: React.FC = () => {
 
     return (
         <>
-            <AppBar style={{ background: userHasScrolled ? "#000" : "transparent" }} position="fixed">
+            <AppBar style={{ background: userHasScrolled ? "#000" : "transparent" }}>
                 <Toolbar>
-                    {/*<IconButton*/}
-                    {/*    edge="start"*/}
-                    {/*    className={classes.menuButton}*/}
-                    {/*    color="inherit"*/}
-                    {/*    aria-label="open drawer"*/}
-                    {/*>*/}
-                    {/*    <MenuIcon />*/}
-                    {/*</IconButton>*/}
-                    {/*<Typography className={classes.title} variant="h6" noWrap>*/}
-                    {/*    J*/}
-                    {/*</Typography>*/}
                     <Paper style={{ background: "transparent" }} square>
                         <Tabs
                             value={value}
