@@ -10,6 +10,7 @@ import profileImage from "../../assets/profile/dark-profile-image.jpeg";
 import { ReactComponent as Graduating } from "./../../assets/graduating.svg";
 import { ReactComponent as Stars } from "./../../assets/stars.svg";
 import ReactWorld from "./../../assets/react-world";
+import ReactIcon from "./../../assets/technologies/react";
 
 /* Material UI */
 import Typography from "@material-ui/core/Typography";
@@ -33,46 +34,45 @@ const Introduction: React.FC = () => {
   return (
     <>
       <S.Container>
-        <S.ContainerIntroduction>
-          <S.Row>
-            {isMobile ? <img alt="profile" src={profileImage} /> : null}
-            <S.TextContainer>
-              <Typography variant="h4">{t("greetings1")},</Typography>
-              <Typography variant="h4" style={{ marginBottom: 20 }}>
-                {t("greetings2")}{" "}
-                <span style={{ color: "#FB87FD" }}>
-                  {t("frontend-developer")}
-                </span>
-                !
-              </Typography>
-              <Typography variant="h6">
-                {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
-              </Typography>
-            </S.TextContainer>
-          </S.Row>
-          {!isMobile ? <img alt="profile" src={profileImage} /> : null}
-        </S.ContainerIntroduction>
+        <S.Section>
+          <img alt="profile" src={profileImage} />
+          <S.TextContainer>
+            <Typography variant="h4">{t("greetings1")},</Typography>
+            <Typography variant="h4" style={{ marginBottom: 20 }}>
+              {t("greetings2")}{" "}
+              <span style={{ color: "#FB87FD" }}>
+                {t("frontend-developer")}
+              </span>
+              !
+            </Typography>
+            <Typography variant="h6">
+              {`${t("about-me-1")} ${yearsOfExperience()} ${t("about-me-2")}`}
+            </Typography>
+          </S.TextContainer>
+        </S.Section>
 
-        <S.Row>
-          <div style={{alignSelf: "center"}}>
-          <S.SmallTextContainer>
-            <Graduating
-              style={{ width: 50, height: 60, margin: "0 10px 10px 0" }}
-            />
-            {`${t("graduate")} `} {` - ${t("course")} `}
-            <S.SmallSpan>{" (2017-2022) "}</S.SmallSpan>|
-            <S.SiteReference href="https://www.ufsm.br/">
-              {t("ufsm")}
-            </S.SiteReference>
-          </S.SmallTextContainer>
-          <S.SmallTextContainer>
-          <Stars style={{ width: 45, height: 50, margin: "0 10px 10px 5px" }} />
-          {t("technologies-introduction")}{" "}
-        </S.SmallTextContainer>
-        </div>
-          <ReactWorld />
-        </S.Row>
+        <S.Section>
+          <section>
+            <address>
+              <Graduating width={50} height={60} />
+              <p>
+                {`${t("graduate")} `} {` - ${t("course")} `}
+                <span>{" (2017-2022) "}</span>|
+                <a href="https://www.ufsm.br/">{t("ufsm")}</a>
+              </p>
+            </address>
 
+            <strong>
+              <Stars width={45} height={50} />
+              {t("technologies-introduction")}
+            </strong>
+          </section>
+
+          <S.ReactWorldWrapper>
+            <ReactIcon width="6.25rem" />
+            <ReactWorld />
+          </S.ReactWorldWrapper>
+        </S.Section>
       </S.Container>
     </>
   );

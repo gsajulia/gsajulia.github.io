@@ -5,6 +5,7 @@ function IconBxlReact(props: TIconBase) {
     <svg
       viewBox="0 0 24 24"
       fill="currentColor"
+      id='react-icon'
       {...props}
     >
       <path d="M13.785 11.245 A1.785 1.785 0 0 1 12 13.03 A1.785 1.785 0 0 1 10.215 11.245 A1.785 1.785 0 0 1 13.785 11.245 z" />
