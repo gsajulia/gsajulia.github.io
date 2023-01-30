@@ -4,13 +4,13 @@ import React from "react";
 import * as S from "./introduction.styles";
 
 /* Images */
-import profileImage from "../../assets/profile/dark-profile-image.jpeg";
+import profileImage from "../../assets/icons/profile/dark-profile-image.jpeg";
 
 /* Icons */
-import { ReactComponent as Graduating } from "./../../assets/graduating.svg";
-import { ReactComponent as Stars } from "./../../assets/stars.svg";
-import ReactWorld from "./../../assets/react-world";
-import ReactIcon from "./../../assets/technologies/react";
+import { ReactComponent as Graduating } from "./../../assets/icons/graduating.svg";
+import { ReactComponent as Stars } from "./../../assets/icons/stars.svg";
+import ReactWorld from "./../../assets/icons/react-world";
+import ReactIcon from "./../../assets/icons/technologies/react";
 
 /* Material UI */
 import Typography from "@material-ui/core/Typography";

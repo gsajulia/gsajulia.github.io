@@ -1,26 +1,26 @@
 
 /* Icons about project technologies */
-import HighCharts from "./../../assets/technologies/highcharts.png";
-import Sass from "./../../assets/technologies/sass.png";
-import Handlebars from "./../../assets/technologies/handlebars.png";
-import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
-import StyledComponents from "../../assets/technologies/styled-components.png";
-import ReactVis from "../../assets/technologies/react-vis.png";
-import ReactIcon from "../../assets/technologies/react.png";
-import Mongo from "./../../assets/technologies/mongo.png";
-import Typescript from "./../../assets/technologies/ts.png";
-import Heroku from "./../../assets/technologies/heroku.png";
-import Node from "./../../assets/technologies/node-js.png";
-import Mongoose from "./../../assets/technologies/mongoose.png";
+import HighCharts from "./../../assets/icons/technologies/highcharts.png";
+import Sass from "./../../assets/icons/technologies/sass.png";
+import Handlebars from "./../../assets/icons/technologies/handlebars.png";
+import Javascript from "./../../assets/icons/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
+import StyledComponents from "../../assets/icons/technologies/styled-components.png";
+import ReactVis from "../../assets/icons/technologies/react-vis.png";
+import ReactIcon from "../../assets/icons/technologies/react.png";
+import Mongo from "./../../assets/icons/technologies/mongo.png";
+import Typescript from "./../../assets/icons/technologies/ts.png";
+import Heroku from "./../../assets/icons/technologies/heroku.png";
+import Node from "./../../assets/icons/technologies/node-js.png";
+import Mongoose from "./../../assets/icons/technologies/mongoose.png";
 import Express from "./../../assets/technologies/express.png";
-import css from "./../../assets/technologies/css.png";
-import html from "./../../assets/technologies/html5.png";
-import R from "./../../assets/technologies/R_logo.png";
-import NN from "./../../assets/technologies/neural.png";
-import Shiny from "./../../assets/technologies/shiny.png";
-import Python from "./../../assets/technologies/python.png";
-import Ruby from "../../assets/technologies/ruby.png";
-import ReactNative from "../../assets/technologies/react-native.png";
+import css from "./../../assets/icons/technologies/css.png";
+import html from "./../../assets/icons/technologies/html5.png";
+import R from "./../../assets/icons/technologies/R_logo.png";
+import NN from "./../../assets/icons/technologies/neural.png";
+import Shiny from "./../../assets/icons/technologies/shiny.png";
+import Python from "./../../assets/icons/technologies/python.png";
+import Ruby from "../../assets/icons/technologies/ruby.png";
+import ReactNative from "../../assets/icons/technologies/react-native.png";
 
 export const flItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },

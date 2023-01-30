@@ -4,18 +4,18 @@ import React, { useState } from "react";
 import { Container } from "./all-projects.styles";
 
 /* Time Control images */
-import TCLogin from "./../../assets/time-control/login.png";
-import TCRegister from "./../../assets/time-control/register.png";
-import TCChildScreen from "./../../assets/time-control/childs-interface.png";
-import TCConfigurationScreen from "./../../assets/time-control/main-interface.png";
+import TCLogin from "./../../assets/icons/time-control/login.png";
+import TCRegister from "./../../assets/icons/time-control/register.png";
+import TCChildScreen from "./../../assets/icons/time-control/childs-interface.png";
+import TCConfigurationScreen from "./../../assets/icons/time-control/main-interface.png";
 
 /* Vacineme images */
-import VMRegister from "./../../assets/vaccine-project/register-user.png";
-import VMAddInfo from "./../../assets/vaccine-project/add-vaccine-info.png";
-import VMChoose from "./../../assets/vaccine-project/choose-cpf.png";
+import VMRegister from "./../../assets/icons/vaccine-project/register-user.png";
+import VMAddInfo from "./../../assets/icons/vaccine-project/add-vaccine-info.png";
+import VMChoose from "./../../assets/icons/vaccine-project/choose-cpf.png";
 
 /* Foraminifera predictor */
-import FPHome from "./../../assets/foraminifera-predictor/Home.png";
+import FPHome from "./../../assets/icons/foraminifera-predictor/Home.png";
 
 /* Material UI */
 import { Typography } from "@material-ui/core";

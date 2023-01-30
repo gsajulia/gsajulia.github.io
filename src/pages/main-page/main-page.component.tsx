@@ -6,7 +6,7 @@ import MyTheme from './../../MyTheme';
 import { Footer, SmallTextContainer, SiteReference, SiteReferenceContainer, EmailContainer } from "./main-page.styles";
 
 /* Icons */
-import { ReactComponent as Stars } from "./../../assets/stars.svg";
+import { ReactComponent as Stars } from "./../../assets/icons/stars.svg";
 
 /* Components */
 import Header from "./../../components/header/header.component";

@@ -15,8 +15,8 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
 
 /* Icons */
-import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
-import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
+import { ReactComponent as Lamp } from "./../../assets/icons/lamp.svg";
+import { ReactComponent as LightLamp } from "./../../assets/icons/light-lamp.svg";
 
 const useStyles = makeStyles((theme) => ({
   root: {

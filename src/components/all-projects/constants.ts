@@ -1,16 +1,16 @@
 /* Icons about project technologies */
-import Javascript from "./../../assets/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
-import StyledComponents from "./../../assets/technologies/styled-components.png";
-import ReactIcon from "./../../assets/technologies/react.png";
-import Mongo from "./../../assets/technologies/mongo.png";
-import Typescript from "./../../assets/technologies/ts.png";
-import Heroku from "./../../assets/technologies/heroku.png";
-import Node from "./../../assets/technologies/node-js.png";
-import Mongoose from "./../../assets/technologies/mongoose.png";
-import Express from "./../../assets/technologies/express.png";
-import R from "./../../assets/technologies/R_logo.png";
-import NN from "./../../assets/technologies/neural.png";
-import Shiny from "./../../assets/technologies/shiny.png";
+import Javascript from "./../../assets/icons/technologies/480px-Unofficial_JavaScript_logo_2.svg.png";
+import StyledComponents from "./../../assets/icons/technologies/styled-components.png";
+import ReactIcon from "./../../assets/icons/technologies/react.png";
+import Mongo from "./../../assets/icons/technologies/mongo.png";
+import Typescript from "./../../assets/icons/technologies/ts.png";
+import Heroku from "./../../assets/icons/technologies/heroku.png";
+import Node from "./../../assets/icons/technologies/node-js.png";
+import Mongoose from "./../../assets/icons/technologies/mongoose.png";
+import Express from "./../../assets/icons/technologies/express.png";
+import R from "./../../assets/icons/technologies/R_logo.png";
+import NN from "./../../assets/icons/technologies/neural.png";
+import Shiny from "./../../assets/icons/technologies/shiny.png";
 
 export const tcItems = [
     { image: ReactIcon, label: "React", width: 45, height: 35, left: 0, right: 2 },

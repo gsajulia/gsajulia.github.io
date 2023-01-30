@@ -22,9 +22,9 @@ import Button from "@material-ui/core/Button";
 import { useTranslation } from "react-i18next";
 
 /* Icons */
-import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
-import { ReactComponent as US } from "./../../assets/united-states.svg";
-import { ReactComponent as BR } from "./../../assets/brasil.svg";
+import { ReactComponent as LightLamp } from "./../../assets/icons/light-lamp.svg";
+import { ReactComponent as US } from "./../../assets/icons/united-states.svg";
+import { ReactComponent as BR } from "./../../assets/icons/brasil.svg";
 
 /* Components */
 import ExperienceCompanies from "../experience-companies/experience-companies.component";
@@ -32,7 +32,7 @@ import ExperienceLanguages from "../experience-languages/experience-languages.co
 import TecnologiesOfElements from "../tecnologies-of-element/tecnologies-of-element.component";
 
 /* Icons about project technologies */
-import { ReactComponent as MySQL } from "./../../assets/technologies/MySQL-Logo.svg";
+import { ReactComponent as MySQL } from "./../../assets/icons/technologies/MySQL-Logo.svg";
 
 import {
   dkItems,

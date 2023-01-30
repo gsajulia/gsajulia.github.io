@@ -11,10 +11,10 @@ import Menu from "@material-ui/core/Menu";
 import withStyles from "@material-ui/core/styles/withStyles";
 
 /* Icons */
-import { ReactComponent as Github } from "./../../assets/github.svg";
-import { ReactComponent as Linkedin } from "./../../assets/linkedin.svg";
-import { ReactComponent as US } from "./../../assets/united-states.svg";
-import { ReactComponent as BR } from "./../../assets/brasil.svg";
+import { ReactComponent as Github } from "./../../assets/icons/github.svg";
+import { ReactComponent as Linkedin } from "./../../assets/icons/linkedin.svg";
+import { ReactComponent as US } from "./../../assets/icons/united-states.svg";
+import { ReactComponent as BR } from "./../../assets/icons/brasil.svg";
 
 /* Translation */
 import { useTranslation } from 'react-i18next';

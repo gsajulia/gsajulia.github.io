@@ -13,10 +13,6 @@ import {
   ContainerImage,
 } from "./projects.styles";
 
-/* Icons */
-import { ReactComponent as Lamp } from "./../../assets/lamp.svg";
-import { ReactComponent as LightLamp } from "./../../assets/light-lamp.svg";
-
 /* Material UI */
 import { Typography } from "@material-ui/core";
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -30,8 +26,8 @@ import IdeaOfTechnologies from "../lamp-of-tech/lamp-of-tech.component";
 import { useTranslation } from "react-i18next";
 
 /* Icons */
-import Github from "./../../assets/technologies/github.png";
-import Sparkle from "./../../assets/technologies/sparkles.png";
+import Github from "./../../assets/icons/technologies/github.png";
+import Sparkle from "./../../assets/icons/technologies/sparkles.png";
 
 const AboutTypography = withStyles({
   root: {
